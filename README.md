@@ -1,2 +1,2 @@
 # Mosi_u
-Proyecto de aula (Esantias para estudiantes)
+Proyecto de aula (Pasantias para estudiantes)
