@@ -1,7 +1,7 @@
 # Mosi_u
 Proyecto de aula (Pasantias para estudiantes)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n
 Archivos separados por paneles de clases
 
 -Main
