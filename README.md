@@ -9,7 +9,7 @@ Archivos separados por paneles de clases
 -Regist
 
 Carpeta userStorage
-Carpeta dataStorege
+Carpeta publicStorege
 Carpeta university
 Carpeta students
 Carpeta enterprice
