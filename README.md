@@ -3,15 +3,42 @@ Proyecto de aula (Pasantias para estudiantes)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-Administrador del proyecto : ()
+Administrador del proyecto > ()
 
 Archivos separados por paneles de clases
 
 -Main
+
 -Login
+
 -Regist
-Carpeta userStorage
-Carpeta publicStorege
-Carpeta university
-Carpeta students
-Carpeta enterprice
+
+-Carpeta userStorage
+
+-Carpeta publicStorege
+
+-Carpeta university
+
+-Carpeta students
+
+-Carpeta enterprice
+
+El Administrador esta acargo de {
+  
+}
+
+El contribuidor () esta acargo de {
+  
+}
+
+El contribuidor () esta acargo de {
+  
+}
+
+El contribuidor () esta acargo de {
+  
+}
+
+El contribuidor () esta acargo de {
+  
+}
