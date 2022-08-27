@@ -24,21 +24,24 @@ Archivos separados por paneles de clases
 -Carpeta enterprice
 
 El Administrador esta acargo de {
-  -Carpeta students
+  
+  
 }
 
 El contribuidor (2A2G) esta acargo de {
   
-}
-
-El contribuidor () esta acargo de {
+  -Carpeta students
   
 }
 
-El contribuidor () esta acargo de {
+El contribuidor (Bronkgameplays) esta acargo de {
   
 }
 
-El contribuidor () esta acargo de {
+El contribuidor (joji) esta acargo de {
+  
+}
+
+El contribuidor (MartinMedrano17) esta acargo de {
   
 }
