@@ -1,5 +1,5 @@
 package students;
 
-public class main {
+public class Students {
     
 }
