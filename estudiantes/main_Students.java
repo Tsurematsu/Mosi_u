@@ -1,7 +1,6 @@
 package estudiantes;
 
-public class main_Students {
+public class main_students {
     public static void main(String[] args) {
-        students.panel_estudiantes();
     }
 }
