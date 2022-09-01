@@ -3,7 +3,7 @@ Proyecto de aula (Pasantias para estudiantes)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-Administrador del proyecto > ()
+Administrador del proyecto > (Tsutematsu)
 
 Archivos separados por paneles de clases
 
@@ -17,32 +17,28 @@ Archivos separados por paneles de clases
 
 -Carpeta publicStorege
 
--Carpeta university
-
 -Carpeta students
 
--Carpeta enterprice
+-Carpeta administrador
 
 El Administrador esta acargo de {
-
+  -Main principal de la aplicacion
+  -Gestion general de archivos
+  -Administrador (Ayuda prioritaria)
 }
 
 El contribuidor (2A2G) esta acargo de {
-
-  -Carpeta students
-	
+  
 }
 
 El contribuidor (Bronkgameplays) esta acargo de {
-
+  
 }
 
 El contribuidor (joji) esta acargo de {
-
-  -Main principal de la aplicacion
-	
+   -Carpeta students	
 }
 
 El contribuidor (MartinMedrano17) esta acargo de {
-
+  
 }
