@@ -3,60 +3,20 @@ var ModuloLoad = new function () {
     let cachePage=[[],[],[]];
     let fileScript=Ruta;
     let SelectPage="";
-    async function readFilePhp(ruta){return decode(await callScript('readFilePHP', ruta, Dec(numerCC)))}
-    async function encode(str) {return callScript("encode", str, Dec(numerCC));}
-    async function decode(str) {return Dec(await callScript("decode", str, Dec(numerCC)));}
-    
-    async function readFile(ruta) {let resultado="";await $.ajax({url : ruta,dataType: "text",success : function (data){resultado = data;}});return resultado;}
-    async function callScript(Funct, Param="", Password="_") {let result="";await $.ajax({method: "POST",url: fileScript,data: {funct:Funct, param:Enc(Param), password:Password},success: function(data) {result = data;},});return result;}
-    async function encodeInText(inWord){let outWord =  inWord;let inText = indicators(inWord, "encode(",")");for (let i = 0; i < inText[0].length; i++) {outWord=outWord.replaceAll(inText[0][i],await encode(inText[1][i]))}return outWord}
-    
-    function Enc( str ) {return window.btoa(unescape(encodeURIComponent( str )));}
-    function Dec( str ) {return decodeURIComponent(escape(window.atob( str )));}
-    function delScript(idScript){var DCT = document.getElementById(idScript); DCT.parentNode.removeChild(DCT);};
-    function indicators(word, open, close) {let inWord= word.split(open);let ListKeys=[[],[]];let count=0;inWord.forEach(element1 => {if (count >0) {let contenido= element1.split(close)[0];ListKeys[1].push(contenido);ListKeys[0].push(open + contenido + close);}else{count++}});return ListKeys}
-    function existList(lista, elemento){let existe=0;for (let i = 0; i < lista.length; i++) {if (existe==0) {if(lista[i]==elemento){existe=i+1/*lista[i];*/}}};return existe;}
-    
-    function ghostScript(textCode, nameId="gost", docLocate=document.getElementsByTagName('body')[0]){
-        let script = document.createElement('script', sedondID=null);
-        let scriptid=Enc(Math.floor(Math.random() * 2080)).replaceAll('.', '').replaceAll('/', '').replaceAll('-', '').replaceAll('=', '');
-        scriptid += "_" +  nameId.replaceAll('.', '').replaceAll('/', '').replaceAll('-', '').replaceAll('=', '');
-        script.id = scriptid;
-        script.innerHTML = textCode;
-        docLocate.appendChild(script);
-        delScript(script.id);
-        if (sedondID!=null) {delScript(sedondID);}
-    };
+    //Las funciones publicas empiezan aqui 
+    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-    function ghostScriptEval(textCode, nameId="gost") {
-        let scriptid=Enc(Math.floor(Math.random() * 2080)).replaceAll('.', '').replaceAll('/', '').replaceAll('-', '').replaceAll('=', '');
-        scriptid += "_" +  nameId.replaceAll('.', '').replaceAll('/', '').replaceAll('-', '').replaceAll('=', '');
-        eval('function '+ scriptid +'() {'+ textCode + '};');
-        // eval('let '+ scriptid +' = new function (){this.main=(()=>{'+ textCode + '});};');
-        eval(scriptid + '();');
-    }
 
-    function ImportJsScrypt(srcText, nameId="gostSRC", docLocate=document.getElementsByTagName('head')[0]){
-        let script = document.createElement('script', sedondID=null);
-        script.id = nameId + "_" + Math.floor(Math.random() * 2080);
-        script.src = srcText;
-        docLocate.appendChild(script);
-        delScript(script.id);
-        if (sedondID!=null) {delScript(sedondID);}
-    };
 
-    function ImportCssScrypt(linktext, nameId="TempStyle_", docLocate=document.getElementsByTagName('body')[0]){
-        var link = document.createElement('link');
-        link.id = nameId + '_' + Math.floor(Math.random() * 2080)
-        link.rel = 'stylesheet'; 
-        link.type = 'text/css';
-        link.href = linktext;
-        docLocate.appendChild(link);
-    };
     
-    
+    //Accseso inicial de la pagina (Ranura Numerica de Memoria en Carga) Advertencia, esta no es manipulable por el programador
     this.rnmLoad = function(rnm){if (security0 ==true){security0=false;numerCC=rnm;}}
+
+    //Esta obtiene la pagina actual seleccionada por el usuario, en formado encriptado
     this.tempPage = function () {return SelectPage;};
+
+    //Carga la pagina que se le indique esta debe estar encriptada, tambien se debe indicar
+    //el lugar en donde esta se cargara en el documento 
     this.load =async function (page, Documento = document.getElementsByTagName("body")[0]){
         SelectPage = page;
         let selectFile;
@@ -142,5 +102,65 @@ var ModuloLoad = new function () {
         Documento.innerHTML=selectFile
         ejecuteScripts();
     }
+
+
+
+
+
+    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+    async function readFilePhp(ruta){return decode(await callScript('readFilePHP', ruta, Dec(numerCC)))}
+    async function encode(str) {return callScript("encode", str, Dec(numerCC));}
+    async function decode(str) {return Dec(await callScript("decode", str, Dec(numerCC)));}
+    
+    async function readFile(ruta) {let resultado="";await $.ajax({url : ruta,dataType: "text",success : function (data){resultado = data;}});return resultado;}
+    async function callScript(Funct, Param="", Password="_") {let result="";await $.ajax({method: "POST",url: fileScript,data: {funct:Funct, param:Enc(Param), password:Password},success: function(data) {result = data;},});return result;}
+    async function encodeInText(inWord){let outWord =  inWord;let inText = indicators(inWord, "encode(",")");for (let i = 0; i < inText[0].length; i++) {outWord=outWord.replaceAll(inText[0][i],await encode(inText[1][i]))}return outWord}
+    
+    function Enc( str ) {return window.btoa(unescape(encodeURIComponent( str )));}
+    function Dec( str ) {return decodeURIComponent(escape(window.atob( str )));}
+    function delScript(idScript){var DCT = document.getElementById(idScript); DCT.parentNode.removeChild(DCT);};
+    function indicators(word, open, close) {let inWord= word.split(open);let ListKeys=[[],[]];let count=0;inWord.forEach(element1 => {if (count >0) {let contenido= element1.split(close)[0];ListKeys[1].push(contenido);ListKeys[0].push(open + contenido + close);}else{count++}});return ListKeys}
+    function existList(lista, elemento){let existe=0;for (let i = 0; i < lista.length; i++) {if (existe==0) {if(lista[i]==elemento){existe=i+1/*lista[i];*/}}};return existe;}
+    
+    function ghostScript(textCode, nameId="gost", docLocate=document.getElementsByTagName('body')[0]){
+        let script = document.createElement('script', sedondID=null);
+        let scriptid=Enc(Math.floor(Math.random() * 2080)).replaceAll('.', '').replaceAll('/', '').replaceAll('-', '').replaceAll('=', '');
+        scriptid += "_" +  nameId.replaceAll('.', '').replaceAll('/', '').replaceAll('-', '').replaceAll('=', '');
+        script.id = scriptid;
+        script.innerHTML = textCode;
+        docLocate.appendChild(script);
+        delScript(script.id);
+        if (sedondID!=null) {delScript(sedondID);}
+    };
+
+    function ghostScriptEval(textCode, nameId="gost") {
+        let scriptid=Enc(Math.floor(Math.random() * 2080)).replaceAll('.', '').replaceAll('/', '').replaceAll('-', '').replaceAll('=', '');
+        scriptid += "_" +  nameId.replaceAll('.', '').replaceAll('/', '').replaceAll('-', '').replaceAll('=', '');
+        eval('function '+ scriptid +'() {'+ textCode + '};');
+        // eval('let '+ scriptid +' = new function (){this.main=(()=>{'+ textCode + '});};');
+        eval(scriptid + '();');
+    }
+
+    function ImportJsScrypt(srcText, nameId="gostSRC", docLocate=document.getElementsByTagName('head')[0]){
+        let script = document.createElement('script', sedondID=null);
+        script.id = nameId + "_" + Math.floor(Math.random() * 2080);
+        script.src = srcText;
+        docLocate.appendChild(script);
+        delScript(script.id);
+        if (sedondID!=null) {delScript(sedondID);}
+    };
+
+    function ImportCssScrypt(linktext, nameId="TempStyle_", docLocate=document.getElementsByTagName('body')[0]){
+        var link = document.createElement('link');
+        link.id = nameId + '_' + Math.floor(Math.random() * 2080)
+        link.rel = 'stylesheet'; 
+        link.type = 'text/css';
+        link.href = linktext;
+        docLocate.appendChild(link);
+    };
+    
 }
+
+//funcion que obtiene el nombre del elemento por su etiqueta
 getTagName = (name, num=0)=>{return document.getElementsByTagName(name)[num];}
