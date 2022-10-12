@@ -8,8 +8,8 @@ var ModuloLoad = new function () {
 
 
 
-    
-    //Accseso inicial de la pagina (Ranura Numerica de Memoria en Carga) Advertencia, esta no es manipulable por el programador
+
+    //Accseso inicial de la pagina (Ranura Numerica de Memoria en Carga) Advertencia, esta no debe ser manipulable por el programador
     this.rnmLoad = function(rnm){if (security0 ==true){security0=false;numerCC=rnm;}}
 
     //Esta obtiene la pagina actual seleccionada por el usuario, en formado encriptado
