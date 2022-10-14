@@ -13,7 +13,7 @@ if (isset($_POST['funct'])) {$func = $_POST['funct']; $func(isset($_POST['param'
     <link rel="icon" href="favicon.png">
     <script src="./Imports/jquery-3.6.0.min.js">
     // <script src="https://code.jquery.com/jquery-3.6.0.min.js">
-    //prueba de vscode webb
+    //prueba de vscode web
     </script><script src="./js/ModuloLoad.js"></script>
     <?php echo '<script>ModuloLoad.rnmLoad("'.$numRand1.'")</script>'; ?>
     <link rel="stylesheet" href="./css/index.css">
