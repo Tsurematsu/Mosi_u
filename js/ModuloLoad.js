@@ -39,7 +39,7 @@ var ModuloLoad = new function () {
 
 
             let JS_Global_Scrypt_List=[];
-            let scriptsDeaful0 = indicators(selectFile, "<script global>", "</script>")
+            let scriptsDeaful0 = indicators(selectFile, "<script Global>", "</script>")
             for (let i = 0; i < scriptsDeaful0[0].length; i++) {
                 selectFile = selectFile.replaceAll(scriptsDeaful0[0][i], "");
                 let editedscurityPage = 'if (ModuloLoad.tempPage()=="' + page + '") { ' + scriptsDeaful0[1][i] + ' }'
