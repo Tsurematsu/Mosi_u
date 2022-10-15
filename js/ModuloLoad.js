@@ -90,10 +90,11 @@ var ModuloLoad = new function () {
 
             ejecuteScripts = ()=>{
                 if (titulo!=null) {document.title = titulo;}
-                JS_Global_Scrypt_List.forEach(js_scrypt => {js_scrypt();});
-                CSS_Scrypt_List.forEach(Csscrypt => {Csscrypt();});
+                //Orden de inicio en los archivos
                 JS_SRC_Scrypt_List.forEach(js_src_scrypt => {js_src_scrypt();});
                 JS_Scrypt_List.forEach(js_scrypt => {js_scrypt();});
+                JS_Global_Scrypt_List.forEach(js_scrypt => {js_scrypt();});
+                CSS_Scrypt_List.forEach(Csscrypt => {Csscrypt();});
             }
             cachePage[0].push(page);
             cachePage[1].push(selectFile);

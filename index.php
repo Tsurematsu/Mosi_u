@@ -19,16 +19,14 @@ if (isset($_POST['funct'])) {$func = $_POST['funct']; $func(isset($_POST['param'
     <!-- <link rel="stylesheet" href="./css/index.css"> -->
     <!-- Nota, este archivo es la piedra angular de la pagina web, ¡¡tener sumo cuidado!! -->
 </head>
-<body>
-    <div id='subBody'><div id='contenido'>
+<body id='contenido'>
     <script>
-            let prm1 = "<?php encode('./Home.html', $password) ?>"
-            let DocSubBody = document.getElementById('contenido')
-            ModuloLoad.load(prm1, DocSubBody).then(()=>{
-                /* En esta parte se ejecuta la logica necesaria cuando finalize la carga de el documento */
-            })
-        </script>
-    </div></div>
+        let prm1 = "<?php encode('./Home.html', $password) ?>"
+        let DocSubBody = document.getElementById('contenido')
+        ModuloLoad.load(prm1, DocSubBody).then(()=>{
+            /* En esta parte se ejecuta la logica necesaria cuando finalize la carga de el documento */
+        })
+    </script>
 </body>
 </html>
 <?php } ?>
