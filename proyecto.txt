@@ -1,46 +1,46 @@
 Listado de rutas de carpetas para el volumen Windows
-El número de serie del volumen es 1425-182A
+El numero de serie del volumen es 1425-182A
 C:.
-¦   .gitattributes
-¦   index.css
-¦   index.html
-¦   index.js
-¦   Mosi_u.iml
-¦   proyecto.txt
-¦   README.md
-¦   
+ï¿½   .gitattributes
+ï¿½   index.css
+ï¿½   index.html
+ï¿½   index.js
+ï¿½   Mosi_u.iml
+ï¿½   proyecto.txt
+ï¿½   README.md
+ï¿½   
 +---1.administrador
-¦       admin.css
-¦       admin.html
-¦       admin.js
-¦       
+ï¿½       admin.css
+ï¿½       admin.html
+ï¿½       admin.js
+ï¿½       
 +---2.personal
-¦       employee.css
-¦       employee.html
-¦       employee.js
-¦       
+ï¿½       employee.css
+ï¿½       employee.html
+ï¿½       employee.js
+ï¿½       
 +---3.usuario
-¦       user.css
-¦       user.html
-¦       user.js
-¦       
+ï¿½       user.css
+ï¿½       user.html
+ï¿½       user.js
+ï¿½       
 +---4.formularios
-¦   +---Login
-¦   ¦       Login.css
-¦   ¦       Login.html
-¦   ¦       Login.js
-¦   ¦       
-¦   +---Regist
-¦           Regist.css
-¦           Regist.html
-¦           Regist.js
-¦           
+ï¿½   +---Login
+ï¿½   ï¿½       Login.css
+ï¿½   ï¿½       Login.html
+ï¿½   ï¿½       Login.js
+ï¿½   ï¿½       
+ï¿½   +---Regist
+ï¿½           Regist.css
+ï¿½           Regist.html
+ï¿½           Regist.js
+ï¿½           
 +---database
-¦       dataBase.js
-¦       
+ï¿½       dataBase.js
+ï¿½       
 +---scrypts
-¦       methods.js
-¦       
+ï¿½       methods.js
+ï¿½       
 +---SRC
         imege1.txt
         
