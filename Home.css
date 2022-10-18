@@ -1,6 +1,12 @@
 #yota{
+<<<<<<< HEAD
     background-color: blueviolet;
     height: 500px;
     width: 500px;
+=======
+    background-color: #36CA67;
+    height: 100px;
+    width: 700px;
+>>>>>>> cdfeb443fac1a0fb188da16b4dd8f068a615157e
     /* Test */
 }
