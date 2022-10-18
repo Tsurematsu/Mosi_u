@@ -1,11 +1,18 @@
 #yota{
+
     background-color: #64C82B;
     height: relative;
     width: auto;
-    font-family: Times New Roman;
-    /* Test */
+    font-family: jokerman;
+    font-size:50px;
+}
+.botones{
+    
+    position: relative;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 15px;
+    
+   
 }
 
-.login{
-
-}
