@@ -1,5 +1,9 @@
 #yota{
     background-color: aqua;
     height: 100px;
-    width: 100px;
+    width: auto;
+    margin: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
 }

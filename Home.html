@@ -19,6 +19,7 @@
             lineas
         </text>
     </p>
+    
 </body>
 </html>
 
@@ -26,14 +27,20 @@
 <!-- Este es un ejemplo de llamada a un script fantasma normal -->
 <!-- esta porcion es encapsulado -->
 <script>
-    //console.log("adios");
-    window.pass="password123";
+    miDiv = document.getElementsByClassName("martin")[0]
+    
+    function karajo() {
+        console.log("hola");
+    }
+    karajo()
 </script>
 
 
 <!-- Este es un ejemplo de llamada a un script fantasma Global -->
 <!-- esta porcion es accesible -->
 <script Global>
-    console.log("la contraseña es " + pass);
-    window.pass=undefined;
+    function martin() {
+        console.log("hola");
+    }
+    martin()
 </script>
