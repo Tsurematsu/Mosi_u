@@ -1,11 +1,6 @@
 #yota{
-    background-color: #64C82B;
-    height: relative;
-    width: auto;
-    font-family: Times New Roman;
-    /* Test */
+    background-color: aqua;
+    height: 500px;
+    width: 500px;
 }
 
-.login{
-
-}
