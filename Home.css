@@ -98,7 +98,9 @@ header .textos-herder{
 
 .imagen-about-us{
     width: 44%;
+    height: 44%;
     margin-right: 4%;
+    text-align: center;
 }
 
 .sobre-nosotros .contenido-textos{
