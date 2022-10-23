@@ -68,12 +68,15 @@ if (isset($_POST['funct'])) {
     <title>Moosi_U</title>
     <link rel="icon" href="favicon.png">
     <script src="./Imports/jquery-3.6.0.min.js">
+        
     // <script src="https://code.jquery.com/jquery-3.6.0.min.js">
     //prueba de vscode web
     </script><script src="./js/ModuloLoad.js"></script>
     <?php echo '<script>ModuloLoad.rnmLoad("'.$numRand1.'")</script>'; ?>
     <!-- <link rel="stylesheet" href="./css/index.css"> -->
     <!-- Nota, este archivo es la piedra angular de la pagina web, ¡¡tener sumo cuidado!! -->
+
+    <link rel="shotycut icon" href="PNG_Home/icon.png" type="image/x-icon">
 </head>
 <body id='contenido'>
     <script>
