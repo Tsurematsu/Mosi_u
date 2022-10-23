@@ -97,10 +97,10 @@ header .textos-herder{
 }
 
 .imagen-about-us{
-    width: 44%;
-    height: 44%;
+    width: 60%;
+    height: 50%;
     margin-right: 4%;
-    text-align: center;
+    padding: 1%;
 }
 
 .sobre-nosotros .contenido-textos{
