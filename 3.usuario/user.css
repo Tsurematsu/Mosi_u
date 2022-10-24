@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    font-size: 50px;
+}
+
+#Header{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient( #654ea3 46%, #eaafc8);
+    color: white;
+}
+
+#Paragraph1 h1{
+    display: inline-block;
+    text-align: center;
+}
+#Paragraph1{
+    padding-top: 30px;
+}
+
+#Onda{
+    margin-top: 200px;
+    width: 100%;
+    position: absolute;
+}
