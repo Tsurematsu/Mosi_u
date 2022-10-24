@@ -22,13 +22,15 @@ var ModuloLoad = new function () {
         let selectFile;
         let ejecuteScripts;
         let existPage=existList(cachePage[0],page);
+
+
         if(existPage){
             selectFile=cachePage[1][existPage-1];
             ejecuteScripts=cachePage[2][existPage-1];
         }else{
             let namePage = await decode(page);
             let litNPage = namePage.replaceAll(".html", "");
-            selectFile=await encodeInText(await readFilePhp(namePage))
+            selectFile=await encodeInText(await readFilePhp())
 
             
             //selectFile=await encodeInText(await readFile(namePage))
@@ -104,18 +106,56 @@ var ModuloLoad = new function () {
         ejecuteScripts();
     }
 
-
-
+    //Obtiene los datos de la base mysql
+    this.mysql =async function (Keyloger, consulta){
+        return await getData(Keyloger, consulta);
+    }
 
 
     //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-    async function readFilePhp(ruta){return decode(await callScript('readFilePHP', ruta, Dec(numerCC)))}
+    
+
+    async function readFilePhp(){return decode(await callScript('readFilePHP', await decode(ModuloLoad.tempPage()), Dec(numerCC)))}
+    async function getData(Keyloger, consulta=""){
+        retornoQuery = await decode(await callScript('MysqlAll', (Keyloger + ";" +  ""), Dec(numerCC)));
+
+        if (consulta=="") {
+            retorno=[[]];
+            recorte = retornoQuery.split(";");
+            for (let i = 0; i < recorte.length; i++) {
+                select = recorte[i].split(",");
+                subValues=[];
+                for (let o = 0; o < select.length; o++) {
+                    subH = select[o].split(":");
+                    subValues.push([subH[0], subH[1]]);
+                }
+                retorno.push(subValues);
+            }
+            return retorno;   
+        }
+    }
+
+
     async function encode(str) {return callScript("encode", str, Dec(numerCC));}
     async function decode(str) {return Dec(await callScript("decode", str, Dec(numerCC)));}
     
     async function readFile(ruta) {let resultado="";await $.ajax({url : ruta,dataType: "text",success : function (data){resultado = data;}});return resultado;}
-    async function callScript(Funct, Param="", Password="_") {let result="";await $.ajax({method: "POST",url: fileScript,data: {funct:Funct, param:Enc(Param), password:Password},success: function(data) {result = data;},});return result;}
+    
+    async function callScript(Funct, Param="", Password="_") {
+        let result="";
+        await $.ajax({
+            method: "POST",
+            url: fileScript,
+            data: {
+                funct:Funct, 
+                param:Enc(Param), 
+                password:Password},
+                success: function(data) {result = data;},
+        });
+        return result;
+    }
+
     async function encodeInText(inWord){let outWord =  inWord;let inText = indicators(inWord, "encode(",")");for (let i = 0; i < inText[0].length; i++) {outWord=outWord.replaceAll(inText[0][i],await encode(inText[1][i]))}return outWord}
     
     function Enc( str ) {return window.btoa(unescape(encodeURIComponent( str )));}

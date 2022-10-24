@@ -1,0 +1,28 @@
+body{
+    font: 10px "Lucida Bright";
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.general{
+    justify-content: center;
+    text-align: center;
+    padding: 90px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: aqua;
+    box-shadow: 20px;
+}
+
+.boton{
+    font: 10px "monaco";
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
