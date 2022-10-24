@@ -144,9 +144,10 @@ header .textos-herder{
 
 .imagen-planes{
     margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
+    padding: 1%;
+    margin-bottom: 10px;
     height: 400px;
+    width: 30%;
     overflow: hidden;
     position: relative;
     cursor: pointer;
