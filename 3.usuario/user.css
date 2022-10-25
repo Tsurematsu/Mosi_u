@@ -3,8 +3,9 @@
     margin: 0;
     text-decoration: none;
     font-family: 'Mulish', sans-serif;
-    font-size: 50px;
+    font-size: 20px;
     list-style: none;
+    transition: all 0.5s ease-out;
 }
 
 
@@ -42,7 +43,7 @@
 #ondulacion{
     margin-top: 250px;
     width: 100%;
-    height: 150px;
+    height: 250px;
     background-size: 100%;
     position: absolute;
     overflow: hidden;
@@ -53,6 +54,7 @@
     background-image: url('img/Ondulacion.svg');
     width: 200%;
     height: 800px;
+    
     animation-name: animacion1;
     animation-duration: 5s;
     animation-iteration-count:  infinite;
@@ -65,7 +67,7 @@
 }
 
 .Panel{
-    background: linear-gradient( #a893e1e4 50%, #f5cadcca 80%);
+    background: linear-gradient( #dacef9ec 50%, #ffd4e6de 80%);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -78,20 +80,23 @@
     border-radius: 20px;
     text-align: center;
     padding: 30px;
+
+    transition: all 0.5s ease-out;
+    opacity: 0;
 }
 
 .Panel input{
     background-color: rgba(255, 255, 255, 0);
     border-radius: 0;
     border: 0;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.721);   
+    border-bottom: 2px solid rgba(0, 0, 0, 0.721);   
     outline: none;
     
     
     cursor: text;
     height: 23px;
     width: 300px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -99,14 +104,15 @@
 }
 
 .Panel input::placeholder{
-    color: rgba(51, 0, 77, 0.366);
+    color: rgba(0, 0, 0, 0.366);
 }
 
 #welcome{
     background: none;
     background-color: rgba(214, 183, 255, 0.808);
     text-align: center;
-
+    opacity: 100;
+    
 }
 
 #welcome h2{
