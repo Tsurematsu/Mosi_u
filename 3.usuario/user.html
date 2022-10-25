@@ -37,19 +37,28 @@
 
     <script>
         let doc = document.getElementById("welcome");
-        
-        setInterval(() => {
-            doc.style.opacity= "0";
+        let WelcomeUser=false;
+
+        if (WelcomeUser==true) {
             setInterval(() => {
-                doc.style.display = "none";
+                doc.style.opacity= "0";
                 setInterval(() => {
-                    document.getElementById("content").style.display = "block";
-                    setTimeout(() => {
-                        document.getElementById("content").style.opacity = "1";
-                    }, 100);
-                }, 10);
-            }, 200);
-        }, 1000);
+                    doc.style.display = "none";
+                    setInterval(() => {
+                        document.getElementById("content").style.display = "block";
+                        setTimeout(() => {
+                            document.getElementById("content").style.opacity = "1";
+                        }, 100);
+                    }, 10);
+                }, 200);
+            }, 1000);
+        }else{
+            doc.style.display = "none";
+            document.getElementById("content").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("content").style.opacity = "1";
+            }, 50);
+        }
     </script>
 </body>
 </html>
