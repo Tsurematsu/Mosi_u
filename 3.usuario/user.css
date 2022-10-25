@@ -4,25 +4,100 @@
     text-decoration: none;
     font-family: 'Mulish', sans-serif;
     font-size: 50px;
+    list-style: none;
 }
 
+
 #Header{
+    top: 0px;
     width: 100%;
-    height: 300px;
-    background: linear-gradient( #654ea3 46%, #eaafc8);
+    height: 500px;
+    
+    background: linear-gradient( #654ea3 30%, #eaafc8 80%);
+
+    background-position-y: 10px;
     color: white;
+
+    
+    
 }
 
 #Paragraph1 h1{
     display: inline-block;
     text-align: center;
-}
-#Paragraph1{
-    padding-top: 30px;
+    margin-left: 40px;
 }
 
-#Onda{
-    margin-top: 150px;
+
+#SubHead{
+    padding-top: 30px;
+    display: inline-block;
     width: 100%;
+}
+
+#SubHead li{
+    font-size: 20px !important;
+}
+
+#ondulacion{
+    margin-top: 250px;
+    width: 100%;
+    height: 150px;
+    background-size: 100%;
     position: absolute;
+    overflow: hidden;
+}
+
+#ondulacion div{
+    position: absolute;
+    background-image: url('img/Ondulacion.svg');
+    width: 200%;
+    height: 800px;
+    animation-name: animacion1;
+    animation-duration: 5s;
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes animacion1 {
+    0%{left: -10px;}
+    100%{left: -100%;}
+}
+
+.Panel{
+    background: linear-gradient( #a893e1e4 50%, #f5cadcca 80%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
+    height:450px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+.Panel input{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0;
+    border: 0;
+    border-bottom: 3px solid black;   
+    outline: none;
+    
+    
+    cursor: text;
+    height: 23px;
+    width: 300px;
+    font-size: 30px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.Panel input::placeholder{
+    color: rgba(51, 0, 77, 0.366);
 }
