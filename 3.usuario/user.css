@@ -5,7 +5,7 @@
     font-family: 'Mulish', sans-serif;
     font-size: 20px;
     list-style: none;
-    transition: all 0.5s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 
@@ -16,28 +16,20 @@
     height: 500px;
     background: linear-gradient( #654ea3 30%, #eaafc8 80%);
     background-position-y: 10px;
-    color: white;
-
-    
-    
+    color: white;    
 }
-
-#Paragraph1 h1{
-    display: inline-block;
+/* 
+display: inline-block;
     text-align: center;
     margin-left: 40px;
-}
-
-
+     */
 #SubHead{
     padding-top: 30px;
     display: inline-block;
     width: 100%;
 }
 
-#SubHead li{
-    font-size: 20px !important;
-}
+
 
 #ondulacion{
     margin-top: 250px;
