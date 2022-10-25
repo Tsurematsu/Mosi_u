@@ -75,27 +75,28 @@
     right: 0;
     margin: auto;
     margin-top: 100px;
-    width: 50%;
+    width: auto;
     height:450px;
     border-radius: 20px;
     text-align: center;
     padding: 30px;
-
+    margin-right: 50px;
+    margin-left: 50px;
     transition: all 0.5s ease-out;
     opacity: 0;
 }
 
 .Panel input{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.48);
     border-radius: 0;
     border: 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.721);   
+    border-bottom: 2px solid rgba(42, 0, 47, 0.882);   
     outline: none;
     
     
     cursor: text;
     height: 23px;
-    width: 300px;
+    width: 30%;
     font-size: 20px;
     padding: 5px;
     padding-left: 15px;
