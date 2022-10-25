@@ -14,11 +14,51 @@
 </head>
 <body>
     <div id="Header">
-        <div id="Paragraph1">
-            <h1>Title</h1>
+        <div id="SubHead">
+            <div style="margin-left: 20px; text-align: left; width: 200px; float: left;">
+                <h1>Mosi_u</h1>
+            </div>
+            <div style="margin-right: 20px; text-align: right; width: 200px; float: right;">
+                <li>selection</li>
+            </div>
         </div>
-        
-        <img id="Onda" src="img/top fondo.png" >
+        <div id="ondulacion">
+            <div></div>
+        </div>
     </div>
+    
+    <div class="Panel" id="welcome" style="display: block;">
+        <h2>Bienvenido usuario</h2>
+    </div>
+
+    <div class="Panel" id="content" style="display: none;">
+        <input type="text" placeholder="Tipo de sangre">
+    </div>
+
+    <script>
+        let doc = document.getElementById("welcome");
+        let WelcomeUser=false;
+
+        if (WelcomeUser==true) {
+            setInterval(() => {
+                doc.style.opacity= "0";
+                setInterval(() => {
+                    doc.style.display = "none";
+                    setInterval(() => {
+                        document.getElementById("content").style.display = "block";
+                        setTimeout(() => {
+                            document.getElementById("content").style.opacity = "1";
+                        }, 100);
+                    }, 10);
+                }, 200);
+            }, 1000);
+        }else{
+            doc.style.display = "none";
+            document.getElementById("content").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("content").style.opacity = "1";
+            }, 50);
+        }
+    </script>
 </body>
 </html>
