@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <a href="Home.html">Inicio</a>
+            <a href="#">Inicio</a>
             <a href="#">Acerca de</a>
             <a href="#">Planes</a>
             <a href="#">Login - Regis</a>
@@ -34,13 +34,21 @@
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo">Nuestro producto</h2>
             <div class="contenedor-sobre-nosotros">
-                <img src="PNG_Home/estudin" alt="PNG_Home/estudin" class="imagen-about-us">
+                <img id="Home_estuding" src="PNG_Home/estudin.png" alt="PNG_Home/estudin" class="imagen-about-us">
                 <div class="contenido-textos">
                     <h3><span> 1</span>Los mejores productos</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ullam ea illo quis eveniet dolore
                         enim dolor tenetur asperiores adipisci, alias veritatis vero. Veniam omnis ab autem id, aut
                         consequatur!</p>
                     <h3><span>2</span>Los mejores productos</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ullam ea illo quis eveniet dolore
+                        enim dolor tenetur asperiores adipisci, alias veritatis vero. Veniam omnis ab autem id, aut
+                        consequatur!</p>
+                        <h3><span> 3</span>Los mejores productos</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ullam ea illo quis eveniet dolore
+                        enim dolor tenetur asperiores adipisci, alias veritatis vero. Veniam omnis ab autem id, aut
+                        consequatur!</p>
+                    <h3><span>4</span>Los mejores productos</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ullam ea illo quis eveniet dolore
                         enim dolor tenetur asperiores adipisci, alias veritatis vero. Veniam omnis ab autem id, aut
                         consequatur!</p>
@@ -72,7 +80,7 @@
                 </div>
             </div>
         </section>
-        <section class="Login - Regis">
+        <section class="Login-Regis" style="display: block;">
             <h2 class="titulo">Inicia Sesion o Registrate</h2>
             <div class="Button">
                 <div class="Button-log">
@@ -123,20 +131,3 @@
 </body>
 
 </html>
-
-
-
-<!-- Este es un ejemplo de llamada a un script fantasma normal -->
-<!-- esta porcion es encapsulado -->
-<script>
-    //console.log("adios");
-    window.pass = "password123";
-</script>
-
-
-<!-- Este es un ejemplo de llamada a un script fantasma Global -->
-<!-- esta porcion es accesible -->
-<script Global>
-    console.log("la contraseña es " + pass);
-    window.pass = undefined;
-</script>

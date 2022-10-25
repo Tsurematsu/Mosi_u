@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body{
@@ -30,26 +31,34 @@ header{
     width: 100%;
     height: 600px;
     background: #3E5151;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e9ca8d81, #487c7c70), url(../Mosi_u/PNG_Home/fondo1.png);
-    background: linear-gradient(to right, #decba48f, #568080), url(../Mosi_u/PNG_Home/fondo1.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #e9ca8d81, #487c7c70), url(PNG_Home/portada.png);
+    background: linear-gradient(to right, #decba48f, #568080), url(PNG_Home/portada.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
 
+/* coomit */
+
 nav{
     text-align: right;
     padding: 30px 50px 0 0;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    background: #3d7a92;
+    padding-bottom: 10px;
 }
 
-nav > a{
-    color: #fff;
+nav a{
+    color: rgb(0, 0, 0);
     font-weight: 300;
     text-decoration: none;
     margin-right: 10px;
+
 }
 
-nav > a:hover{
+nav a:hover{
     text-decoration: underline;
 }
 
@@ -88,12 +97,14 @@ header .textos-herder{
 }
 
 .imagen-about-us{
-    width: 44%;
+    width: 60%;
+    height: 50%;
     margin-right: 4%;
+    padding: 1%;
 }
 
 .sobre-nosotros .contenido-textos{
-    width: 48;
+    width: 650px;
 }
 
 .contenido-textos h3{
@@ -133,9 +144,10 @@ header .textos-herder{
 
 .imagen-planes{
     margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
+    padding: 1%;
+    margin-bottom: 10px;
     height: 400px;
+    width: 30%;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -176,12 +188,14 @@ header .textos-herder{
 .Button{
     text-align: center;
     height: 100%;
+    width: 100%;
 }
 
 .Button-log{
     width: 100;
     height: 50px;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 .Button-Reg{
     height: 50px;
