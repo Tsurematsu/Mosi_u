@@ -101,3 +101,18 @@
 .Panel input::placeholder{
     color: rgba(51, 0, 77, 0.366);
 }
+
+#welcome{
+    background: none;
+    background-color: rgba(214, 183, 255, 0.808);
+    text-align: center;
+
+}
+
+#welcome h2{
+    padding-top: 150px;
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(40, 25, 136) 75%, rgb(147, 66, 197) 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
