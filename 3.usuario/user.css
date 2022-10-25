@@ -52,10 +52,7 @@ display: inline-block;
     animation-timing-function: linear;
 }
 
-@keyframes animacion1 {
-    0%{left: -10px;}
-    100%{left: -100%;}
-}
+
 
 .Panel{
     background: linear-gradient( #dacef9ec 50%, #ffd4e6de 80%);
@@ -114,4 +111,39 @@ display: inline-block;
     background: -webkit-linear-gradient(rgb(40, 25, 136) 75%, rgb(147, 66, 197) 95%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+#ApUser{
+    display: inline-flex;
+    width: 420px;
+    outline: none;
+}
+
+#ApUser img{
+    height: 40px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#ApUser li{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 4px;
+    height: 20px;
+    transition: all 100ms linear;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    cursor: pointer;
+}
+
+#ApUser li:hover{
+    /* color: #000000; */
+    background-color: rgba(255, 255, 255, 0.174);
+    border-bottom: #fbf4ff solid;
+    border-radius: 1px;
 }
