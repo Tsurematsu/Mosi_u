@@ -10,12 +10,11 @@
 
 
 #Header{
-    top: 0px;
+    position: absolute;
+    top: -10px;
     width: 100%;
     height: 500px;
-    
     background: linear-gradient( #654ea3 30%, #eaafc8 80%);
-
     background-position-y: 10px;
     color: white;
 
@@ -113,11 +112,12 @@
     background-color: rgba(214, 183, 255, 0.808);
     text-align: center;
     opacity: 100;
+    height: 150px;
     
 }
 
 #welcome h2{
-    padding-top: 150px;
+    padding-top: 50px;
     font-size: 50px;
     background: -webkit-linear-gradient(rgb(40, 25, 136) 75%, rgb(147, 66, 197) 95%);
     -webkit-background-clip: text;
