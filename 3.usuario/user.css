@@ -149,9 +149,13 @@ display: inline-block;
 }
 
 
-#content .content_Panel input{
-    display: block;
+#content .content_Panel button{
     margin-top: 10px;
+}
+    #content .content_Panel input{
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
     width: 88%;
     /* margin-left: auto; */
     /* margin-right: auto; */
