@@ -147,3 +147,22 @@ display: inline-block;
     border-bottom: #fbf4ff solid;
     border-radius: 1px;
 }
+
+
+#content .content_Panel input{
+    display: block;
+    margin-top: 10px;
+    width: 88%;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+#content .content_Panel{
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 180px;
+    display: inline-block;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
