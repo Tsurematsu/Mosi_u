@@ -26,6 +26,19 @@ body{
 
 }
 
+section .nombre , .fecha , .emerg, .universidad{
+    width: 30%;
+}
+
+
+section .apellido, .correo, .cel, .contraseña{
+    width: 60%;
+    position: relative;
+    padding-left: 50%;
+}
+
+
+
 
 .boton{
     font: 10px "monaco";
@@ -51,10 +64,18 @@ a{
 }
 
 .inputs input{
-    border-radius: 5px;
-    border-color: blueviolet;
+    border-radius: 1px;
+    border: none;
+    /* border-color: blueviolet; */
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    outline: none;
+    background-color: rgba(184, 220, 250, 0.162);
     width: 100%;
     height: 25px;
+    border-bottom: solid 2px black;
+    font-size: 15px;
 
 }
 .inputs input::placeholder{
