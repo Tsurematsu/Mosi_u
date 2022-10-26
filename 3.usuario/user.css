@@ -74,13 +74,13 @@ display: inline-block;
     opacity: 0;
 }
 
-.Panel input{
+
+.Panel input, select{
     background-color: rgba(255, 255, 255, 0.48);
     border-radius: 0;
     border: 0;
     border-bottom: 2px solid rgba(42, 0, 47, 0.882);   
     outline: none;
-    
     
     cursor: text;
     height: 23px;
@@ -89,10 +89,16 @@ display: inline-block;
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
-
+    cursor: pointer;
 }
 
-.Panel input::placeholder{
+.Panel select, option{
+    width: 98%;
+    height: 40px;
+    border-radius: 1px;
+}
+
+.Panel input, select::placeholder{
     color: rgba(0, 0, 0, 0.366);
 }
 
@@ -150,9 +156,27 @@ display: inline-block;
 
 
 #content .content_Panel button{
+    position: relative;
+    left: -5px;
     margin-top: 10px;
+    padding: 5px;
+    background-color: rgba(255, 253, 253, 0.333);
+    border: none;
+    width: 95%;
 }
-    #content .content_Panel input{
+
+#content .content_Panel button:hover{
+    background-color: white;
+}
+
+#content .content_Panel select:hover{
+    background-color: white;
+}
+#content .content_Panel input:hover{
+    background-color: white;
+}
+
+#content .content_Panel input, select{
     display: block;
     margin-top: 8px;
     margin-bottom: 8px;

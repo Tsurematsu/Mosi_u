@@ -64,20 +64,32 @@
 
     <div class="Panel" id="content" style="display: none;">
         <label style="display: block;">Genera tu tiquet</label>
+        
         <div class="content_Panel">
-            <input type="text" placeholder="Punto de partida">
-            <input type="text" placeholder="Punto de llegada">
+            <select name="" id="">
+                <option value="">Punto de partida</option>
+                <option value="">Cartagena de indias</option>
+            </select>
+
+            <select name="" id="">
+                <option value="">Punto de llegada</option>
+                <option value="">Santa Marta</option>
+                <option value="">Bogota</option>
+            </select>
+            
             <input type="date" placeholder="Fecha de vuelo" name="" id="">
             <input type="time" placeholder="hora de vuelo" name="" id="">
-            <button>Aplicar</button>
+            <button>Generar</button>
         </div>
+
+      
 
         
     </div>
 
     <script>
         let doc = document.getElementById("welcome");
-        let WelcomeUser=false;
+        let WelcomeUser=true;
 
         if (WelcomeUser==true) {
             setInterval(() => {
