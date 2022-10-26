@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  
+
 <head>
-    <meta charset="utf-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="Login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
-  </head>
-  
-  <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(234, 175, 200, 1)" offset="0%"></stop><stop stop-color="rgba(101, 78, 163, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,245L205.7,294L411.4,343L617.1,441L822.9,392L1028.6,98L1234.3,98L1440,0L1645.7,245L1851.4,245L2057.1,196L2262.9,294L2468.6,441L2674.3,343L2880,294L3085.7,343L3291.4,49L3497.1,343L3702.9,294L3908.6,392L4114.3,196L4320,392L4525.7,98L4731.4,245L4937.1,147L4937.1,490L4731.4,490L4525.7,490L4320,490L4114.3,490L3908.6,490L3702.9,490L3497.1,490L3291.4,490L3085.7,490L2880,490L2674.3,490L2468.6,490L2262.9,490L2057.1,490L1851.4,490L1645.7,490L1440,490L1234.3,490L1028.6,490L822.9,490L617.1,490L411.4,490L205.7,490L0,490Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 168.53, 205.17, 1)" offset="0%"></stop><stop stop-color="rgba(101, 78, 163, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,49L205.7,294L411.4,196L617.1,147L822.9,294L1028.6,441L1234.3,49L1440,343L1645.7,0L1851.4,196L2057.1,392L2262.9,0L2468.6,245L2674.3,343L2880,147L3085.7,294L3291.4,294L3497.1,294L3702.9,147L3908.6,0L4114.3,441L4320,245L4525.7,98L4731.4,49L4937.1,245L4937.1,490L4731.4,490L4525.7,490L4320,490L4114.3,490L3908.6,490L3702.9,490L3497.1,490L3291.4,490L3085.7,490L2880,490L2674.3,490L2468.6,490L2262.9,490L2057.1,490L1851.4,490L1645.7,490L1440,490L1234.3,490L1028.6,490L822.9,490L617.1,490L411.4,490L205.7,490L0,490Z"></path></svg>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="Login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+</head>
 
-  <body>
-    <section class="form-login">
-      <h5>Inicia Sesion</h5>
-      <input class="controls"type="text" name="usuario" value="" placeholder="Usuario">
-      <input class="controls"type="password" name="contrasena" value="" placeholder="Contraseña">
-      <input class="buttons" type="submit" name="" value="Ingresar">
-      
-      <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+<svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+      <stop stop-color="rgba(234, 175, 200, 1)" offset="0%"></stop>
+      <stop stop-color="rgba(101, 78, 163, 1)" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+    d="M0,245L205.7,294L411.4,343L617.1,441L822.9,392L1028.6,98L1234.3,98L1440,0L1645.7,245L1851.4,245L2057.1,196L2262.9,294L2468.6,441L2674.3,343L2880,294L3085.7,343L3291.4,49L3497.1,343L3702.9,294L3908.6,392L4114.3,196L4320,392L4525.7,98L4731.4,245L4937.1,147L4937.1,490L4731.4,490L4525.7,490L4320,490L4114.3,490L3908.6,490L3702.9,490L3497.1,490L3291.4,490L3085.7,490L2880,490L2674.3,490L2468.6,490L2262.9,490L2057.1,490L1851.4,490L1645.7,490L1440,490L1234.3,490L1028.6,490L822.9,490L617.1,490L411.4,490L205.7,490L0,490Z">
+  </path>
+  <defs>
+    <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+      <stop stop-color="rgba(255, 168.53, 205.17, 1)" offset="0%"></stop>
+      <stop stop-color="rgba(101, 78, 163, 1)" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+    d="M0,49L205.7,294L411.4,196L617.1,147L822.9,294L1028.6,441L1234.3,49L1440,343L1645.7,0L1851.4,196L2057.1,392L2262.9,0L2468.6,245L2674.3,343L2880,147L3085.7,294L3291.4,294L3497.1,294L3702.9,147L3908.6,0L4114.3,441L4320,245L4525.7,98L4731.4,49L4937.1,245L4937.1,490L4731.4,490L4525.7,490L4320,490L4114.3,490L3908.6,490L3702.9,490L3497.1,490L3291.4,490L3085.7,490L2880,490L2674.3,490L2468.6,490L2262.9,490L2057.1,490L1851.4,490L1645.7,490L1440,490L1234.3,490L1028.6,490L822.9,490L617.1,490L411.4,490L205.7,490L0,490Z">
+  </path>
+</svg>
 
-    </section>
+<body>
+  <section class="form-login">
+    <h5>Inicia Sesion</h5>
+    <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
+    <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
+    <input class="buttons" type="submit" name="" value="Ingresar">
 
-  </body>
+    <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+
+  </section>
+
+</body>
+
 </html>
