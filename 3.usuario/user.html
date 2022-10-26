@@ -63,12 +63,21 @@
     </div>
 
     <div class="Panel" id="content" style="display: none;">
-        <input type="text" placeholder="Tipo de sangre">
+        <label style="display: block;">Genera tu tiquet</label>
+        <div class="content_Panel">
+            <input type="text" placeholder="Punto de partida">
+            <input type="text" placeholder="Punto de llegada">
+            <input type="date" placeholder="Fecha de vuelo" name="" id="">
+            <input type="time" placeholder="hora de vuelo" name="" id="">
+            <button>Aplicar</button>
+        </div>
+
+        
     </div>
 
     <script>
         let doc = document.getElementById("welcome");
-        let WelcomeUser=true;
+        let WelcomeUser=false;
 
         if (WelcomeUser==true) {
             setInterval(() => {

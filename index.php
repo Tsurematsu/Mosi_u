@@ -80,7 +80,7 @@ if (isset($_POST['funct'])) {
 </head>
 <body id='contenido'>
     <script>
-        let prm1 = "<?php encode('./3.usuario/user.html', $password) ?>"
+        let prm1 = "<?php encode('./Home1/Home.html', $password) ?>"
         let DocSubBody = document.getElementById('contenido')
         ModuloLoad.load(prm1, DocSubBody).then(()=>{
             /* En esta parte se ejecuta la logica necesaria cuando finalize la carga de el documento */
