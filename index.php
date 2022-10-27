@@ -73,6 +73,7 @@ if (isset($_POST['funct'])) {
     //prueba de vscode web
     </script><script src="./js/ModuloLoad.js"></script>
     <?php echo '<script>ModuloLoad.rnmLoad("'.$numRand1.'")</script>'; ?>
+
     <!-- <link rel="stylesheet" href="./css/index.css"> -->
     <!-- Nota, este archivo es la piedra angular de la pagina web, ¡¡tener sumo cuidado!! -->
 
