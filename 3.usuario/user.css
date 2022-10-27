@@ -80,11 +80,6 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 }
 
 
-/* Panel de welcome
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-*/
-
-
 /* apartado opciones de usuario en el HEAD
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
@@ -100,15 +95,15 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     padding: 4px;
     height: 20px;
     transition: all 100ms linear;
+    cursor: pointer;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; 
-    cursor: pointer;
 }
 
 #OptionsUser li:hover{
-    /* color: #000000; */
     background-color: rgba(255, 255, 255, 0.174);
     border-bottom: #fbf4ff solid;
     border-radius: 1px;
@@ -116,16 +111,17 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 #OptionsUser img{
     height: 40px;
-    margin-left: 10px;
-    background-color: white;
-    border-radius: 50%;
     padding: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: white;
 }
 
-/* apartado opciones de usuario en el HEAD
+
+
+/* panel 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
-
 
 
 .Panel{
@@ -169,6 +165,17 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     height: 40px;
 }
 
+.sub_Panel{
+    background-color: #654ea3;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    height: 230px;
+    display: inline-block;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
 
 .Entradas{
     background-color: rgba(255, 255, 255, 0.48);
@@ -197,14 +204,3 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     color: rgba(0, 0, 0, 0.366);
 }
 
-.content_Panel{
-    background-color: #654ea3;
-    margin: 10px;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    height: 230px;
-    display: inline-block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-}
