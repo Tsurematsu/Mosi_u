@@ -30,6 +30,7 @@
         <div id="ondulacion">
             <div></div>
             <style>
+
                 #ondulacion {
                     margin-top: 250px;
                     width: 100%;
@@ -65,64 +66,105 @@
 
     </div>
 
-    <div class="Panel" id="welcome" style="display: block;">
-        <h2>Bienvenido usuario</h2>
-    </div>
-
-    <div class="Panel" id="content" style="display: none;">
-        <label style="display: block;">Genera tu tiquet</label>
-
-        <div class="sub_Panel">
-            <select class="Entradas" name="" id="">
-                <option value="">Punto de partida</option>
-                <option value="">Cartagena de indias</option>
-            </select>
-
-            <select class="Entradas" name="" id="">
-                <option value="">Punto de llegada</option>
-                <option value="">Santa Marta</option>
-                <option value="">Bogota</option>
-            </select>
-            
-            <input onmousemove="cambio(this);" class="Entradas" type="date" placeholder="Fecha de vuelo" name="" id="">
-            <input class="Entradas" type="time" placeholder="hora de vuelo" name="" id="">
-            <button class="Entradas">Generar</button>
+    <div id="BodyDown">
+        <div class="GeneralStyle" id="Panel_welcome">
+            <h2>Bienvenido usuario</h2>
         </div>
+    
+        <div class="GeneralStyle" id="Panel_content">
+            <label style="display: block;">Genera tu tiquet</label>
+
+            <div class="sub_Panel">
+                <label for="">Punto de partida</label>
+                <select class="Entradas" name="" id="">
+                    <option value="">Departamento</option>
+                    <option value="">Bolivar</option>
+                </select>
+    
+                <select class="Entradas" name="" id="">
+                    <option value="">Localidad</option>
+                    <option value="">Cartagena</option>
+                    <option value="">Etc</option>
+                </select>
+
+                <label for="">Punto de llegada</label>
+                <select class="Entradas" name="" id="">
+                    <option value="">Departamento</option>
+                    <option value="">Bolivar</option>
+                </select>
+    
+                <select class="Entradas" name="" id="">
+                    <option value="">Localidad</option>
+                    <option value="">Cartagena</option>
+                    <option value="">Etc</option>
+                </select>
+            </div>
 
 
+            <div class="sub_Panel">
+                <label for="">Fecha de entrada Uni</label>
+                <input onmousemove="cambio(this,'date');" onmouseout="cambio(this);" class="Entradas" placeholder="Fecha de vuelo">
+                <input onmousemove="cambio(this,'time');" onmouseout="cambio(this);" class="Entradas" placeholder="hora de vuelo" name="" id="">         
+            
+                <label for="">Viajes disponibles</label>
+                <select class="Entradas" name="" id="">
+                    <option value="">Disponibles</option>
+                    <option value="">Santa Marta</option>
+                    <option value="">Bogota</option>
+                </select>
+                <button class="Entradas">Generar</button>  
+            
+            </div>
+    
 
-
+            
+        </div>
+    
     </div>
-
     <script>
         let WelcomeUser=false;
+
+
+        let ifDesktop = /android|iphone|kindle|ipad/i;
+        if (ifDesktop.test(navigator.userAgent)) {
+            let lista = document.getElementsByTagName("input");
+            for (let i = 0; i < lista.length; i++) {
+                lista[i].style.maxWidth = "146px";
+            }
+        }
         
-        
-        function cambio(e) {
-            console.log(e);
-            document.getElementById("").setAttribute("type") = "text"
+        async function cambio(e, tipo=null) {
+            if (tipo == null) {
+                document.body.focus();
+                await setTimeout(() => {
+                    e.setAttribute("type","text");
+                    e.disabled=true;
+                    setTimeout(() => {e.disabled=false;}, 500);
+                }, 9000);
+            }else{
+                e.setAttribute("type", tipo);
+            }
         }
 
-
-        let doc = document.getElementById("welcome");
+        let doc = document.getElementById("Panel_welcome");
         if (WelcomeUser == true) {
             setInterval(() => {
                 doc.style.opacity = "0";
                 setInterval(() => {
                     doc.style.display = "none";
                     setInterval(() => {
-                        document.getElementById("content").style.display = "block";
+                        document.getElementById("Panel_content").style.display = "block";
                         setTimeout(() => {
-                            document.getElementById("content").style.opacity = "1";
+                            document.getElementById("Panel_content").style.opacity = "1";
                         }, 100);
                     }, 10);
                 }, 200);
             }, 1000);
         } else {
             doc.style.display = "none";
-            document.getElementById("content").style.display = "block";
+            document.getElementById("Panel_content").style.display = "block";
             setTimeout(() => {
-                document.getElementById("content").style.opacity = "1";
+                document.getElementById("Panel_content").style.opacity = "1";
             }, 50);
         }
     </script>
