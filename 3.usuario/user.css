@@ -3,12 +3,21 @@
     margin: 0;
     text-decoration: none;
     font-family: 'Mulish', sans-serif;
-    font-size: 20px;
+    font-size: 1.5vw;
     list-style: none;
     transition: all 0.2s ease-out;
 }
 
 
+#BodyDown{
+    top: 100px;
+    position: absolute;
+    width: 100%;
+}
+
+/* Fondo y cabeza de la pagina
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
 #Header{
     position: absolute;
     top: -10px;
@@ -30,167 +39,155 @@ display: inline-block;
 }
 
 
-
-#ondulacion{
-    margin-top: 250px;
-    width: 100%;
-    height: 250px;
-    background-size: 100%;
-    position: absolute;
-    overflow: hidden;
-}
-
-#ondulacion div{
-    position: absolute;
-    background-image: url('img/Ondulacion.svg');
-    width: 200%;
-    height: 800px;
-    
-    animation-name: animacion1;
-    animation-duration: 5s;
-    animation-iteration-count:  infinite;
-    animation-timing-function: linear;
-}
-
-
-
-.Panel{
-    background: linear-gradient( #dacef9ec 50%, #ffd4e6de 80%);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-top: 100px;
-    width: auto;
-    height:450px;
-    border-radius: 20px;
-    text-align: center;
-    padding: 30px;
-    margin-right: 50px;
-    margin-left: 50px;
-    transition: all 0.5s ease-out;
-    opacity: 0;
-}
-
-
-.Panel input, select{
-    background-color: rgba(255, 255, 255, 0.48);
-    border-radius: 0;
-    border: 0;
-    border-bottom: 2px solid rgba(42, 0, 47, 0.882);   
+/* apartado opciones de usuario en el HEAD
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
+#OptionsUser{
+    display: inline-flex;
+    width: 40%;
     outline: none;
-    
-    cursor: text;
-    height: 23px;
-    width: 30%;
-    font-size: 20px;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    cursor: pointer;
 }
 
-.Panel select, option{
-    width: 98%;
-    height: 40px;
+#OptionsUser li{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 4px;
+    height: 20px;
+    transition: all 100ms linear;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+#OptionsUser li:hover{
+    background-color: rgba(255, 255, 255, 0.174);
+    border-bottom: #fbf4ff solid;
     border-radius: 1px;
 }
 
-.Panel input, select::placeholder{
-    color: rgba(0, 0, 0, 0.366);
+#OptionsUser img{
+    height: 40px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: white;
 }
 
-#welcome{
+
+
+/* Panel de welcome
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
+#Panel_welcome{
     background: none;
     background-color: rgba(214, 183, 255, 0.808);
     text-align: center;
-    opacity: 100;
+    opacity: 1;
     height: 150px;
     
 }
 
-#welcome h2{
+#Panel_welcome h2{
     padding-top: 50px;
-    font-size: 50px;
+    font-size: 4vw;
     background: -webkit-linear-gradient(rgb(40, 25, 136) 75%, rgb(147, 66, 197) 95%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 
-#ApUser{
-    display: inline-flex;
-    width: 420px;
-    outline: none;
+/* panel styles
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
+
+
+.GeneralStyle{
+    width: auto;
+    margin: 5%;
+    background: linear-gradient( #dacef9ec 50%, #ffd4e6de 80%);
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.5s ease-out;
+    padding-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    opacity: 0;
 }
 
-#ApUser img{
+#Panel_content select{
     height: 40px;
-    margin-left: 10px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 5px;
-}
-
-#ApUser li{
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 4px;
-    height: 20px;
-    transition: all 100ms linear;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
-    cursor: pointer;
-}
-
-#ApUser li:hover{
-    /* color: #000000; */
-    background-color: rgba(255, 255, 255, 0.174);
-    border-bottom: #fbf4ff solid;
     border-radius: 1px;
 }
 
 
-#content .content_Panel button{
+
+/* Panel de contenido
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
+#Panel_content{
+    padding: 10px;
+    padding-right: 68px;
+}
+
+.sub_Panel{
+    border: solid rgba(0, 0, 0, 0.158) 1px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    padding-bottom: 10px;
+
+    /* background-color: #654ea3; */
+    /* height: 230px; */
+
+    max-width: 300px;
+    width: 100%;
+    display: -webkit-inline-box;
     position: relative;
-    left: -5px;
-    margin-top: 10px;
-    padding: 5px;
-    background-color: rgba(255, 253, 253, 0.333);
+    margin-top: 30px;
+}
+
+.sub_Panel button{
+    height: 40px;  
+    margin-top: 15px; 
+    background-color: #fdaaf9c5;
     border: none;
-    width: 95%;
+    border-radius: 10px;
 }
 
-#content .content_Panel button:hover{
-    background-color: white;
+.sub_Panel input{
+    width: 100% !important;
+    max-width: 250px;
+    margin-top: 12px;
 }
 
-#content .content_Panel select:hover{
-    background-color: white;
-}
-#content .content_Panel input:hover{
-    background-color: white;
-}
-
-#content .content_Panel input, select{
-    display: block;
+.Entradas{
+    background-color: rgba(255, 255, 255, 0.48);
+    border-radius: 0;
+    border: 0;
+    border-bottom: 2px solid rgba(42, 0, 47, 0.882);   
+    outline: none;
+    cursor: pointer;
+    cursor: text;
+    height: 23px;
+    width: 100% !important;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: -webkit-inline-box;
+    position: relative;
     margin-top: 8px;
     margin-bottom: 8px;
-    width: 88%;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
 }
 
-#content .content_Panel{
-    margin: 10px;
-    padding: 10px;
-    width: 300px;
-    height: 180px;
-    display: inline-block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+.Entradas:hover{
+    background-color: white;
 }
+
+.Entradas::placeholder{
+    color: rgba(0, 0, 0, 0.366);
+}
+
