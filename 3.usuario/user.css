@@ -157,6 +157,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 .sub_Panel input{
     width: 100% !important;
     max-width: 250px;
+    margin-top: 12px;
 }
 
 .Entradas{
