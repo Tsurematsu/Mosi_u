@@ -154,27 +154,25 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     border-radius: 1px;
 }
 
-.Panel button{
-    position: relative;
-    left: -5px;
-    margin-top: 10px;
-    padding: 5px;
-    background-color: rgba(255, 253, 253, 0.333);
-    border: none;
-    width: 95%;
-    height: 40px;
-}
-
 .sub_Panel{
-    background-color: #654ea3;
+    /* background-color: #654ea3; */
+    border: solid rgba(0, 0, 0, 0.158) 1px;
+    border-radius: 10px;
     margin: 10px;
     padding: 10px;
     width: 100%;
     max-width: 400px;
     height: 230px;
     display: inline-block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+}
+
+.sub_Panel button{
+    height: 40px;   
+}
+
+.sub_Panel input{
+    width: 100% !important;
+    max-width: 370px;
 }
 
 .Entradas{

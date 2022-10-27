@@ -84,7 +84,7 @@
                 <option value="">Bogota</option>
             </select>
             
-            <input class="Entradas" type="date" placeholder="Fecha de vuelo" name="" id="">
+            <input onmousemove="cambio(this);" class="Entradas" type="date" placeholder="Fecha de vuelo" name="" id="">
             <input class="Entradas" type="time" placeholder="hora de vuelo" name="" id="">
             <button class="Entradas">Generar</button>
         </div>
@@ -95,9 +95,16 @@
     </div>
 
     <script>
-        let doc = document.getElementById("welcome");
         let WelcomeUser=false;
+        
+        
+        function cambio(e) {
+            console.log(e);
+            document.getElementById("").setAttribute("type") = "text"
+        }
 
+
+        let doc = document.getElementById("welcome");
         if (WelcomeUser == true) {
             setInterval(() => {
                 doc.style.opacity = "0";
