@@ -44,7 +44,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
 #OptionsUser{
     display: inline-flex;
-    width: 40%;
+    width: 45%;
     outline: none;
 }
 
@@ -144,7 +144,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
     max-width: 300px;
     width: 100%;
-    display: -webkit-inline-box;
+    display: inline-block;
     position: relative;
     margin-top: 30px;
 }
@@ -162,6 +162,37 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     max-width: 250px;
     margin-top: 12px;
 }
+
+/* #SpecialLabel{
+    display: block;
+} */
+
+.sub_Panel ul{
+    height: 157px;
+    padding: 0px;
+    width:  auto !important;
+    position: relative;
+    display:  list-item;
+    overflow: hidden;
+    overflow-y: auto;
+    /* left: -150px;
+    top: 30px; */
+}
+
+.Entradas li{
+    transition-duration: 0.2s;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+.Entradas li:hover{
+    background-color: #ded7ff !important;
+}
+
 
 .Entradas{
     background-color: rgba(255, 255, 255, 0.48);
