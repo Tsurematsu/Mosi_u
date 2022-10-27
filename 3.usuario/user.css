@@ -107,8 +107,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 .GeneralStyle{
     width: auto;
     margin: 5%;
-    background: linear-gradient( #dacef9ec 50%, #ffd4e6de 80%);
-    border-radius: 20px;
+    background: linear-gradient( #ffffff 40%, #ffffffa2 90%);
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 4px;
     text-align: center;
     transition: all 0.5s ease-out;
     padding-top: 20px;
@@ -130,10 +131,12 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 #Panel_content{
     padding: 10px;
     padding-right: 68px;
+
 }
 
 .sub_Panel{
     border: solid rgba(0, 0, 0, 0.158) 1px;
+    background-color: rgb(245, 236, 255);
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
@@ -148,6 +151,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     position: relative;
     margin-top: 30px;
 }
+
 
 .sub_Panel button{
     height: 40px;  
