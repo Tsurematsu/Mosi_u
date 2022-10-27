@@ -12,6 +12,58 @@ body{
   padding: 10px;
   
 }
+
+.wave::before {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(img/bg.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    opacity: .2;
+    animation: wave-reverse 8s linear infinite;
+}
+
+.wave::after {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(img/wave.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    opacity: .8;
+    animation-delay: -4s;
+    animation: wave 16s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 100vw;
+    }
+}
+
+@keyframes wave-reverse {
+    0% {
+        background-position: 100vw;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
 .container{
   max-width: 700px;
   width: 100%;
@@ -19,6 +71,7 @@ body{
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  float: center;
 }
 .container .title{
   font-size: 25px;
