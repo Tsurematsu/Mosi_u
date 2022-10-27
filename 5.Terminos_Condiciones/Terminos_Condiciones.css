@@ -94,12 +94,11 @@ Body{
 
 }
 
-.selection{
-
-    position: absolute;
-    width: 100%;
-    height: auto;
-    left: 0%;
+.selec,input{
+    
+    width: auto;
+    padding: 10px;
+    margin: 10px;
     background-color: rgba(63, 188, 192, 0.301);
     display: flex;
     color: black;
