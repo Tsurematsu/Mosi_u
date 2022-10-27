@@ -18,7 +18,7 @@
             <div style="margin-left: 20px; text-align: left; width: 200px; float: left;">
                 <h1>Mosi_u</h1>
             </div>
-            <div id="ApUser" style="margin-right: 20px; text-align: right; float: right;">
+            <div id="OptionsUser" style="margin-right: 20px; text-align: right; float: right;">
                 <li>Hystory</li>
                 <li>Log Out</li>
                 <li>View profile</li>
@@ -66,20 +66,20 @@
         <label style="display: block;">Genera tu tiquet</label>
         
         <div class="content_Panel">
-            <select name="" id="">
+            <select class="Entradas" name="" id="">
                 <option value="">Punto de partida</option>
                 <option value="">Cartagena de indias</option>
             </select>
 
-            <select name="" id="">
+            <select class="Entradas" name="" id="">
                 <option value="">Punto de llegada</option>
                 <option value="">Santa Marta</option>
                 <option value="">Bogota</option>
             </select>
             
-            <input type="date" placeholder="Fecha de vuelo" name="" id="">
-            <input type="time" placeholder="hora de vuelo" name="" id="">
-            <button>Generar</button>
+            <input class="Entradas" type="date" placeholder="Fecha de vuelo" name="" id="">
+            <input class="Entradas" type="time" placeholder="hora de vuelo" name="" id="">
+            <button class="Entradas">Generar</button>
         </div>
 
       
@@ -89,7 +89,7 @@
 
     <script>
         let doc = document.getElementById("welcome");
-        let WelcomeUser=true;
+        let WelcomeUser=false;
 
         if (WelcomeUser==true) {
             setInterval(() => {

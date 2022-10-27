@@ -8,7 +8,9 @@
     transition: all 0.2s ease-out;
 }
 
-
+/* Fondo y cabeza de la pagina
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
 #Header{
     position: absolute;
     top: -10px;
@@ -52,56 +54,14 @@ display: inline-block;
     animation-timing-function: linear;
 }
 
+/* Fondo y cabeza de la pagina
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
 
 
-.Panel{
-    background: linear-gradient( #dacef9ec 50%, #ffd4e6de 80%);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-top: 100px;
-    width: auto;
-    height:450px;
-    border-radius: 20px;
-    text-align: center;
-    padding: 30px;
-    margin-right: 50px;
-    margin-left: 50px;
-    transition: all 0.5s ease-out;
-    opacity: 0;
-}
-
-
-.Panel input, select{
-    background-color: rgba(255, 255, 255, 0.48);
-    border-radius: 0;
-    border: 0;
-    border-bottom: 2px solid rgba(42, 0, 47, 0.882);   
-    outline: none;
-    
-    cursor: text;
-    height: 23px;
-    width: 30%;
-    font-size: 20px;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    cursor: pointer;
-}
-
-.Panel select, option{
-    width: 98%;
-    height: 40px;
-    border-radius: 1px;
-}
-
-.Panel input, select::placeholder{
-    color: rgba(0, 0, 0, 0.366);
-}
-
+/* Panel de welcome
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
 #welcome{
     background: none;
     background-color: rgba(214, 183, 255, 0.808);
@@ -120,21 +80,21 @@ display: inline-block;
 }
 
 
-#ApUser{
+/* Panel de welcome
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
+
+
+/* apartado opciones de usuario en el HEAD
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
+#OptionsUser{
     display: inline-flex;
     width: 420px;
     outline: none;
 }
 
-#ApUser img{
-    height: 40px;
-    margin-left: 10px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 5px;
-}
-
-#ApUser li{
+#OptionsUser li{
     margin-top: 10px;
     margin-left: 10px;
     padding: 4px;
@@ -147,15 +107,58 @@ display: inline-block;
     cursor: pointer;
 }
 
-#ApUser li:hover{
+#OptionsUser li:hover{
     /* color: #000000; */
     background-color: rgba(255, 255, 255, 0.174);
     border-bottom: #fbf4ff solid;
     border-radius: 1px;
 }
 
+#OptionsUser img{
+    height: 40px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
 
-#content .content_Panel button{
+/* apartado opciones de usuario en el HEAD
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+*/
+
+
+
+.Panel{
+    background: linear-gradient( #dacef9ec 50%, #ffd4e6de 80%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    width: auto;
+    height:450px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+    padding-right: 70px;
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: auto;
+    
+    
+    transition: all 0.5s ease-out;
+    opacity: 0;
+
+}
+
+.Panel select{
+    height: 40px;
+    border-radius: 1px;
+}
+
+.Panel button{
     position: relative;
     left: -5px;
     margin-top: 10px;
@@ -163,33 +166,44 @@ display: inline-block;
     background-color: rgba(255, 253, 253, 0.333);
     border: none;
     width: 95%;
+    height: 40px;
 }
 
-#content .content_Panel button:hover{
-    background-color: white;
-}
 
-#content .content_Panel select:hover{
-    background-color: white;
-}
-#content .content_Panel input:hover{
-    background-color: white;
-}
-
-#content .content_Panel input, select{
+.Entradas{
+    background-color: rgba(255, 255, 255, 0.48);
+    border-radius: 0;
+    border: 0;
+    border-bottom: 2px solid rgba(42, 0, 47, 0.882);   
+    outline: none;
+    cursor: pointer;
+    cursor: text;
+    height: 23px;
+    width: 100% !important;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     display: block;
     margin-top: 8px;
     margin-bottom: 8px;
-    width: 88%;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
 }
 
-#content .content_Panel{
+.Entradas:hover{
+    background-color: white;
+}
+
+.Entradas::placeholder{
+    color: rgba(0, 0, 0, 0.366);
+}
+
+.content_Panel{
+    background-color: #654ea3;
     margin: 10px;
     padding: 10px;
-    width: 300px;
-    height: 180px;
+    width: 100%;
+    max-width: 400px;
+    height: 230px;
     display: inline-block;
     /* margin-left: auto; */
     /* margin-right: auto; */
