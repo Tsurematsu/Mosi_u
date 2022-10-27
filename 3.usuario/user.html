@@ -102,7 +102,7 @@
             </div>
 
 
-            <div class="sub_Panel">
+            <div class="sub_Panel" style="display: none;">
                 <label for="">Fecha de entrada Uni</label>
                 <input onmousemove="cambio(this,'date');" onmouseout="cambio(this);" class="Entradas" placeholder="Fecha de vuelo">
                 <input onmousemove="cambio(this,'time');" onmouseout="cambio(this);" class="Entradas" placeholder="hora de vuelo" name="" id="">         
@@ -120,14 +120,8 @@
             
             </div>
     
-            <div class="sub_Panel" id="SpecialLabel">
+            <div class="sub_Panel" style="display: none;">
                 <label for="">Viajes disponibles</label>
-                <!-- <select class="Entradas" name="" id="">
-                    <option value="">Disponibles</option>
-                    <option value="">vuelo 1 900.000$</option>
-                    <option value="">vuelo 2 700.000$</option>
-                </select> -->
-
                 <ul class="Entradas">
                     <li>Kilometro</li>
                     <li>vuelo 2 900.000$</li>
@@ -140,8 +134,6 @@
                     <li>vuelo 3 900.000$</li>
                     <li>vuelo 3 900.000$</li>
                 </ul>
-
-                
                 <button class="Entradas">Generar</button>  
             
             </div>
@@ -151,9 +143,26 @@
     
     </div>
     <script>
+
+        Recorrido((e)=>{
+            e.addEventListener("click", ()=>{
+                Recorrido((o)=>{o.style.backgroundColor = "transparent";});
+                e.style.backgroundColor = "#e389ffcc";
+            });
+            // document.body.addEventListener("mosu");
+        });
+
+        function Recorrido(funcion) {
+            let listDoc = document.getElementsByClassName("Entradas");
+            for (let i = 0; i < listDoc.length; i++) {
+                let subI = listDoc[i].getElementsByTagName("li");
+                for (let f = 0; f < subI.length; f++) {
+                    funcion(subI[f]);
+                }
+            }     
+        }   
+
         let WelcomeUser=false;
-
-
         let ifDesktop = /android|iphone|kindle|ipad/i;
         if (ifDesktop.test(navigator.userAgent)) {
             let lista = document.getElementsByTagName("input");
