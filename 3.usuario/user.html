@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel = "preconnect" href = "https://fonts.googleapis.com">
-    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin >
-    <enlace href = "https://fonts.googleapis.com/css2?familia =Mulish&mostrar = swap "rel =" stylesheet ">
-    <link rel="stylesheet" href="../3.usuario/user.css">
-    
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <enlace href="https://fonts.googleapis.com/css2?familia =Mulish&mostrar = swap " rel=" stylesheet ">
+        <link rel="stylesheet" href="../3.usuario/user.css">
+
+        <title>Document</title>
 </head>
+
 <body>
     <div id="Header">
         <div id="SubHead">
@@ -27,8 +29,8 @@
         </div>
         <div id="ondulacion">
             <div></div>
-            <style>  
-                #ondulacion{
+            <style>
+                #ondulacion {
                     margin-top: 250px;
                     width: 100%;
                     height: 250px;
@@ -36,35 +38,40 @@
                     position: absolute;
                     overflow: hidden;
                 }
-    
-                #ondulacion div{
+
+                #ondulacion div {
                     position: absolute;
                     background-image: url('img/Ondulacion.svg');
                     width: 200%;
                     height: 800px;
-                    
+
                     animation-name: animacion1;
                     animation-duration: 5s;
-                    animation-iteration-count:  infinite;
+                    animation-iteration-count: infinite;
                     animation-timing-function: linear;
                 }
 
                 @keyframes animacion1 {
-                    0%{left: -10px;}
-                    100%{left: -100%;}
+                    0% {
+                        left: -10px;
+                    }
+
+                    100% {
+                        left: -100%;
+                    }
                 }
             </style>
         </div>
-        
+
     </div>
-    
+
     <div class="Panel" id="welcome" style="display: block;">
         <h2>Bienvenido usuario</h2>
     </div>
 
     <div class="Panel" id="content" style="display: none;">
         <label style="display: block;">Genera tu tiquet</label>
-        
+
         <div class="content_Panel">
             <select class="Entradas" name="" id="">
                 <option value="">Punto de partida</option>
@@ -82,18 +89,18 @@
             <button class="Entradas">Generar</button>
         </div>
 
-      
 
-        
+
+
     </div>
 
     <script>
         let doc = document.getElementById("welcome");
         let WelcomeUser=false;
 
-        if (WelcomeUser==true) {
+        if (WelcomeUser == true) {
             setInterval(() => {
-                doc.style.opacity= "0";
+                doc.style.opacity = "0";
                 setInterval(() => {
                     doc.style.display = "none";
                     setInterval(() => {
@@ -104,7 +111,7 @@
                     }, 10);
                 }, 200);
             }, 1000);
-        }else{
+        } else {
             doc.style.display = "none";
             document.getElementById("content").style.display = "block";
             setTimeout(() => {
@@ -113,4 +120,5 @@
         }
     </script>
 </body>
+
 </html>
