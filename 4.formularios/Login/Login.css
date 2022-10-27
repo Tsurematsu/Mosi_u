@@ -5,6 +5,11 @@
   }
   
   .form-login {
+    position: absolute;
+    top: 69%;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 400px;
     height: 340px;
     background: #654ea3;  /* fallback for old browsers */
