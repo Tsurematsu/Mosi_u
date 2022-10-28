@@ -9,23 +9,25 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  
+  background: #de6161;  
+  background: -webkit-linear-gradient(to right, #2657eb, #de6161);
+  background: linear-gradient(to right, #2657eb, #de6161);
+
 }
 
 .wave::before {
-
     content: '';
     position: absolute;
     width: 100%;
-    padding-top: 12%;
+    height: 12%;
     top: -5px;
     left: 0;
-    background-image: url(img/bg.png);
+    background-image: url(img/wave.png);
     background-repeat: repeat-x;
     background-size: 100%;
-    opacity: .2;
-    animation: wave-reverse 8s linear infinite;
+    background-position: absolute;
+    opacity: .4;
+    animation: wave-reverse 7s linear infinite;
 }
 
 .wave::after {
@@ -141,7 +143,7 @@ form .input-box span.details{
   width: 18px;
   border-radius: 50%;
   margin-right: 10px;
-  background: #d9d9d9;
+  background: #ffffff;
   border: 5px solid transparent;
   transition: all 0.3s ease;
 }
