@@ -3,7 +3,7 @@
     margin: 0;
     text-decoration: none;
     font-family: 'Mulish', sans-serif;
-    font-size: 1.5vw;
+    font-size: 18px;
     list-style: none;
     transition: all 0.2s ease-out;
 }
@@ -44,7 +44,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
 #OptionsUser{
     display: inline-flex;
-    width: 45%;
+    width: auto;
     outline: none;
 }
 
@@ -92,7 +92,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 #Panel_welcome h2{
     padding-top: 50px;
-    font-size: 4vw;
+    font-size: 20px;
     background: -webkit-linear-gradient(rgb(40, 25, 136) 75%, rgb(147, 66, 197) 95%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -106,16 +106,18 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 .GeneralStyle{
     width: auto;
+    height: auto;
     margin: 5%;
-    background: linear-gradient( #ffffff 40%, #ffffffa2 90%);
-    /* background-color: rgb(255, 255, 255); */
-    border-radius: 4px;
-    text-align: center;
-    transition: all 0.5s ease-out;
-    padding-top: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-top: 20px;
+    border-radius: 4px;
     opacity: 0;
+    display: none;
+    text-align: center;
+    transition: all 0.5s ease-out;
+    background: linear-gradient( #ffffff 40%, #ffffffa2 90%);
+    /* background-color: rgb(255, 255, 255); */
 }
 
 #Panel_content select{
@@ -172,7 +174,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 } */
 
 .sub_Panel ul{
-    height: 157px;
+    height: 185px;
     padding: 0px;
     width:  auto !important;
     position: relative;
@@ -229,3 +231,18 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     color: rgba(0, 0, 0, 0.366);
 }
 
+
+
+.TituloPanel{
+    display: block;
+    margin-top: 20px !important;
+}
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+/* #Panel_Profile{
+    display: block;
+    opacity: 1;
+    padding: 30px;
+} */

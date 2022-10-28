@@ -40,10 +40,10 @@
         </div>
 
         <div class="GeneralStyle" id="Panel_content">
-            <label style="display: block;">Genera tu tiquet</label>
+            <label style="font-size: 25px; display: block;">Genera tu tiquet</label>
 
             <div class="sub_Panel">
-                <label for="">Punto de partida</label>
+                <label class="TituloPanel">Punto de partida</label>
                 <select class="Entradas" name="" id="">
                     <option value="">Departamento</option>
                     <option value="">Bolivar</option>
@@ -55,7 +55,7 @@
                     <option value="">Etc</option>
                 </select>
 
-                <label for="">Punto de llegada</label>
+                <label class="TituloPanel">Punto de llegada</label>
                 <select class="Entradas" name="" id="">
                     <option value="">Departamento</option>
                     <option value="">Bolivar</option>
@@ -69,14 +69,14 @@
             </div>
 
 
-            <div class="sub_Panel" style="display: none;">
-                <label for="">Fecha de entrada Uni</label>
+            <div class="sub_Panel" style="display: inline-block;">
+                <label class="TituloPanel">Fecha de entrada Uni</label>
                 <input onmousemove="cambio(this,'date');" onmouseout="cambio(this);" class="Entradas"
                     placeholder="Fecha de vuelo">
                 <input onmousemove="cambio(this,'time');" onmouseout="cambio(this);" class="Entradas"
                     placeholder="hora de vuelo" name="" id="">
 
-                <label for="">Tipo de entrada</label>
+                <label class="TituloPanel">Tipo de entrada</label>
                 <select class="Entradas" name="" id="">
                     <option value="">Ejecutivo</option>
                     <option value="">Premiun</option>
@@ -89,25 +89,33 @@
 
             </div>
 
-            <div class="sub_Panel" style="display: none;">
-                <label for="">Viajes disponibles</label>
+            <div class="sub_Panel" style="display: inline-block;">
+                <label class="TituloPanel">Viajes disponibles</label>
                 <ul class="Entradas">
                     <li>Kilometro</li>
                     <li>vuelo 2 900.000$</li>
                     <li>vuelo 3 900.000$</li>
-                    <li>vuelo 3 900.000$</li>
-                    <li>vuelo 3 900.000$</li>
-                    <li>vuelo 3 900.000$</li>
-                    <li>vuelo 3 900.000$</li>
-                    <li>vuelo 3 900.000$</li>
-                    <li>vuelo 3 900.000$</li>
-                    <li>vuelo 3 900.000$</li>
+                    <li>vuelo 4 900.000$</li>
+                    <li>vuelo 5 900.000$</li>
+                    <li>vuelo 6 900.000$</li>
+                    <li>vuelo 7 900.000$</li>
+                    <li>vuelo 8 900.000$</li>
+                    <li>vuelo 9 900.000$</li>
+                    <li>vuelo 10 900.000$</li>
                 </ul>
                 <button class="Entradas">Generar</button>
 
             </div>
 
 
+        </div>
+
+        <div class="GeneralStyle" id="Panel_Profile">
+            <label>Profile</label>
+        </div>
+
+        <div class="GeneralStyle" id="Panel_History">
+            <label>History</label>
         </div>
 
     </div>
