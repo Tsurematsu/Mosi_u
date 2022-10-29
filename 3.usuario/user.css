@@ -8,6 +8,23 @@
     transition: all 0.2s ease-out;
 }
 
+.ondaConten{
+    transform: scaleY(-1);
+    position: absolute;
+    top: 400px;
+    width: 100%;
+}
+
+#Ond1{
+    opacity: 0.3;
+    
+}
+
+#Ond2 *{
+    animation-duration: 7s !important;
+    opacity: 0.2;
+
+}
 
 #BodyDown{
     top: 100px;
@@ -22,7 +39,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     position: absolute;
     top: -10px;
     width: 100%;
-    height: 500px;
+    height: 101%;
     background: linear-gradient( #654ea3 30%, #eaafc8 80%);
     background-position-y: 10px;
     color: white;    
