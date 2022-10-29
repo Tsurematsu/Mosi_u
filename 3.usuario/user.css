@@ -166,11 +166,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     padding: 10px;
     padding-right: 68px;
 
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
 }
 
 .sub_Panel{
-    border: solid rgba(0, 0, 0, 0.158) 1px;
-    background-color: rgb(245, 236, 255);
+    /* border: solid rgba(0, 0, 0, 0.158) 1px; */
+    /* background-color: rgb(255, 255, 255); */
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
@@ -190,9 +193,15 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 .sub_Panel button{
     height: 40px;  
     margin-top: 15px; 
-    background-color: #fdaaf9c5;
-    border: none;
+    background-color: #ffffffc5;
+    border: solid 1px black;
     border-radius: 10px;
+    /* text-align: center !important; */
+}
+
+.sub_Panel button:active{
+    background-color: rgb(245, 196, 255) !important;
+    
 }
 
 .sub_Panel input{
@@ -213,6 +222,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     display:  list-item;
     overflow: hidden;
     overflow-y: auto;
+    border: none;
+    border-radius: 5px;
     /* left: -150px;
     top: 30px; */
 }
@@ -227,22 +238,22 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     user-select: none; 
 }
 
-.Entradas li:hover{
-    background-color: #ded7ff !important;
-}
+/* .Entradas li:hover{
+    background-color: #ffffff !important;
+} */
 
 .Entradas li:active{
-    background-color: #d75afdcc !important;
+    background-color: #d75afde8 !important;
 }
 
 .Entradas{
-    background-color: rgba(255, 255, 255, 0.48);
+    background-color: rgba(228, 228, 228, 0.788);
     border-radius: 0;
     border: 0;
     border-bottom: 2px solid rgba(42, 0, 47, 0.882);   
     outline: none;
-    cursor: pointer;
-    cursor: text;
+    /* cursor: pointer;
+    cursor: text; */
     height: 23px;
     width: 100% !important;
     font-size: 20px;
@@ -253,17 +264,16 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     position: relative;
     margin-top: 8px;
     margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .Entradas:hover{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .Entradas::placeholder{
     color: rgba(0, 0, 0, 0.366);
 }
-
-
 
 .TituloPanel{
     display: block;
