@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+#titulos {
+    
+    height: 10%;
+    width: 1000%;
+    margin-top: 15%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 150%;
+    color: rgb(0, 0, 0);
+    position: static;
+
+}
+
+Body{
+    margin: 0%;
+}
+
+.Panel {
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background: url(Png/bg.png);
+    background-size: cover;
+
+}
+
+.wave::before {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(Png/wave.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    opacity: .2;
+    animation: wave-reverse 8s linear infinite;
+}
+
+.wave::after {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(Png/wave.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    opacity: .8;
+    animation-delay: -4s;
+    animation: wave 16s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 100vw;
+    }
+}
+
+@keyframes wave-reverse {
+    0% {
+        background-position: 100vw;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
+.contenido{
+
+    position: absolute;
+    width: 80%;
+    height: auto;
+    left: 10%;
+    right: 10%;
+    margin-top: 23%;
+    text-align: justify;
+    font-size: 150%;
+    padding: 1%;
+    color: white;
+    background-color: rgba(63, 188, 192, 0.158);
+
+}
+
+.selec,input{
+    
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(63, 188, 192, 0.301);
+    display: flex;
+    color: black;
+    font-size: 80%;
+    
+}
