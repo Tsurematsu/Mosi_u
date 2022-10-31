@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(180deg, #ffb8eb 0, #654ea3 100%);
+    background-image: linear-gradient(180deg, #ffb8eb 75%, #654ea3 111%);
     background-attachment: fixed;
   }
   
