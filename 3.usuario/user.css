@@ -8,9 +8,27 @@
     transition: all 0.2s ease-out;
 }
 
+.ondaConten{
+    transform: scaleY(-1);
+    position: absolute;
+    top: 470px;
+    width: 100%;
+}
+
+#Ond1 *{
+    opacity: 0.9;
+    animation-duration: 11s !important;
+    
+}
+
+#Ond2 *{
+    animation-duration: 5s !important;
+    opacity: 0.2;
+    top: -10px;
+}
 
 #BodyDown{
-    top: 100px;
+    top: 160px;
     position: absolute;
     width: 100%;
 }
@@ -22,10 +40,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     position: absolute;
     top: -10px;
     width: 100%;
-    height: 500px;
+    height: 101%;
     background: linear-gradient( #654ea3 30%, #eaafc8 80%);
     background-position-y: 10px;
-    color: white;    
+    color: white;  
+    /* z-index: -1;   */
 }
 /* 
 display: inline-block;
@@ -36,9 +55,14 @@ display: inline-block;
     padding-top: 30px;
     display: inline-block;
     width: 100%;
+    /* background-color: white; */
+    padding-bottom: 10px;
+    color: black;
 }
 
-
+#SubHead * {
+ z-index: 99;
+}
 /* apartado opciones de usuario en el HEAD
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 */
@@ -49,12 +73,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 }
 
 #OptionsUser li{
+    display: block;
     margin-top: 10px;
-    margin-left: 10px;
     padding: 4px;
     height: 20px;
-    transition: all 100ms linear;
+    transition: all 0.1s linear;
     cursor: pointer;
+    padding-left: 10px;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -63,9 +88,15 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 }
 
 #OptionsUser li:hover{
-    background-color: rgba(255, 255, 255, 0.174);
-    border-bottom: #fbf4ff solid;
+    border-bottom: 1px solid #000000;
     border-radius: 1px;
+    
+}
+
+#OptionsUser li:active{
+    background-color: rgba(0, 0, 0, 0.174);
+    border: none;
+    border-radius: 3px;
 }
 
 #OptionsUser img{
@@ -73,7 +104,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     padding: 5px;
     margin-left: 10px;
     border-radius: 50%;
-    background-color: white;
+    border: solid 1px black;
+    /* background-color: rgb(255, 0, 0); */
 }
 
 
@@ -134,11 +166,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     padding: 10px;
     padding-right: 68px;
 
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
 }
 
 .sub_Panel{
-    border: solid rgba(0, 0, 0, 0.158) 1px;
-    background-color: rgb(245, 236, 255);
+    /* border: solid rgba(0, 0, 0, 0.158) 1px; */
+    /* background-color: rgb(255, 255, 255); */
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
@@ -158,9 +193,15 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 .sub_Panel button{
     height: 40px;  
     margin-top: 15px; 
-    background-color: #fdaaf9c5;
-    border: none;
+    background-color: #ffffffc5;
+    border: solid 1px black;
     border-radius: 10px;
+    /* text-align: center !important; */
+}
+
+.sub_Panel button:active{
+    background-color: rgb(245, 196, 255) !important;
+    
 }
 
 .sub_Panel input{
@@ -181,6 +222,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     display:  list-item;
     overflow: hidden;
     overflow-y: auto;
+    border: none;
+    border-radius: 5px;
     /* left: -150px;
     top: 30px; */
 }
@@ -195,22 +238,22 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     user-select: none; 
 }
 
-.Entradas li:hover{
-    background-color: #ded7ff !important;
-}
+/* .Entradas li:hover{
+    background-color: #ffffff !important;
+} */
 
 .Entradas li:active{
-    background-color: #d75afdcc !important;
+    background-color: #d75afde8 !important;
 }
 
 .Entradas{
-    background-color: rgba(255, 255, 255, 0.48);
+    background-color: rgba(228, 228, 228, 0.788);
     border-radius: 0;
     border: 0;
     border-bottom: 2px solid rgba(42, 0, 47, 0.882);   
     outline: none;
-    cursor: pointer;
-    cursor: text;
+    /* cursor: pointer;
+    cursor: text; */
     height: 23px;
     width: 100% !important;
     font-size: 20px;
@@ -221,17 +264,16 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     position: relative;
     margin-top: 8px;
     margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .Entradas:hover{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .Entradas::placeholder{
     color: rgba(0, 0, 0, 0.366);
 }
-
-
 
 .TituloPanel{
     display: block;
