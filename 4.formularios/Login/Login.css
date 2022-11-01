@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(180deg, #ffb8eb 75%, #654ea3 111%);
+    background-image: linear-gradient(180deg, rgb(238, 113, 200) 77%, #654ea3 99%);
     background-attachment: fixed;
   }
   
@@ -11,8 +11,8 @@
     width: 400px;
     height: 340px;
     background: #654ea3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #eaafc8, #B852D0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eaafc8, #B852D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: auto;
     margin-top: 70px;
     box-shadow: 7px 13px 37px #000;
