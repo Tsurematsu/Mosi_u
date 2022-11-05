@@ -8,6 +8,7 @@
     <title>Terminos y Condiciones</title>
     <link rel="stylesheet" href="Terminos_Condiciones.css">
     <link rel="stylesheet" type="text/css" href="Terminos_Condiciones.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -19,19 +20,22 @@
         </div>
         <div class="contenido">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tenetur, voluptas doloremque, fuga magnam
-                odio, suscipit dolorem repellendus quam atque nihil voluptatem accusantium. Necessitatibus assumenda
-                illo nostrum cum dignissimos temporibus?
-            </p>
-            <h2>Después de haber leido los terminos
-                y condiciones de MOSI_U usted:
-            </h2>
-            <div class="selec">
-                <script src="Terminos_Condiciones.js"></script>
-                <input type="checkbox">Acepto
-                <input type="checkbox">No acepto
-            </div>
 
+            </p>
         </div>
     </div>
+
+    <script>
+        async function Conten() {
+            await $.ajax({
+                // method: "POST",
+                url: "contenido.txt",
+                dataType: "text",
+                success: function (data) {
+                    document.getElementsByClassName("contenido")[0].innerHTML = (data.replace(/(\r\n|\n|\r)/gm, "<br>"));
+                },
+            })
+        }
+        Conten();
+    </script>
 </body>
