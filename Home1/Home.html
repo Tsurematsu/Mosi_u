@@ -40,9 +40,18 @@
                     </svg>
             </section>
             <div class="botones">
-                <button class="btn btiniciar">Iniciar Sesion</button>
-                <button class="btn btregistro">Registrarse</button>
+                <button id="Boton1" class="btn btiniciar">Iniciar Sesion</button>
+                <button id="Boton2" class="btn btregistro">Registrarse</button>
             </div>
+
+            <script>
+                let btn1 = document.getElementById("Boton1");
+                btn1.addEventListener("click", ()=>{location.href = "/4.formularios/Login/Login.html";});
+
+                let btn2 = document.getElementById("Boton2");
+                btn2.addEventListener("click", ()=>{location.href = "/4.formularios/Regist/Regist.html";});
+                
+            </script>
         
         </div>
     </header>
