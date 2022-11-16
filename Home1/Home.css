@@ -164,25 +164,44 @@ nav>a:hover{
 }
 
 .botones{
+    position: relative;
     align-content:center;
     justify-content: right;
-    display: grid;
+    display: inline-block;
     height: 5%;
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    top: -100px;
+    padding-right: 100px;
+}
+
+.botones div{
+    position: relative;
+    margin-left: auto;
+    /* background-color: red; */
+    width: 200px;
+
 }
 
 .btn{
+    margin-bottom: 10px;
     border: 5px solid rgba(100, 100, 100, 0.1);
-    margin-bottom: 100px;
-    margin-right: 290px;
-    padding: 20px;
     width: 200px;
+    height: 55px;
     font-family: 'Mulish', sans-serif;
     font-size: 18px;
     border-radius: 90px;
     cursor: pointer;
     color: white;
     background-size: 300%;
+    /* margin-bottom: 100px;
+    margin-right: 290px; */
+    background-image: linear-gradient(to left, #c471ed, #12c2e9,  #c471ed);
     transition: 1s;
+    display:inline-block;
+    
 }
 
 .btn:hover{
@@ -190,13 +209,3 @@ nav>a:hover{
     text-decoration: underline
 }
 
-.btiniciar{
-
-    background-image: linear-gradient(to left, #c471ed, #12c2e9,  #c471ed);
-
-}
-
-.btregistro{
-
-    background-image: linear-gradient(to left, #c471ed, #12c2e9,  #c471ed);
-}
