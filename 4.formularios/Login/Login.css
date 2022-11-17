@@ -6,6 +6,10 @@
     background-image: linear-gradient(180deg, rgb(231, 142, 205) 77%, #8368cf 99%);
     background-attachment: fixed;
   }
+
+  body{
+    font-family: 'Mulish', sans-serif;
+  }
   
   .form-login {
     width: 400px;
