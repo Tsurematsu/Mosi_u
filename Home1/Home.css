@@ -180,11 +180,8 @@ nav>a:hover{
     position: relative;
     margin-left: auto;
     margin-top: auto;
-    
     width: 500px;
     padding-top: 20px;
-    
-
 }
 
 .btn{
@@ -209,4 +206,91 @@ nav>a:hover{
 .btn:hover{
     background-position: right;
     text-decoration: underline
+}
+
+/* FOOTER */
+
+.titulo-contacto{
+
+    position: relative;
+    text-align: center;
+    color: #654ea3;
+    margin-top: -150px;
+    font-size: 40px;
+}
+
+.contacto{
+    background-color:hsla(335, 59%, 80%, 0.267);
+    
+}
+
+.telefono{
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+    color: #654ea3;
+    padding-right: 350px;
+    top: -280px;
+}
+.telefono p{
+    color: black;
+    font-size: 18px;
+    padding-right: 1px;
+}
+
+.correo{
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+    color:#654ea3;
+    padding-right: 350px;
+    top:-220px
+}
+
+.correo p{
+    color: black;
+    font-size: 18px;
+}
+
+
+.ubicacion{
+
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+    color:#654ea3;
+    padding-right: 350px;
+    top: -150px
+}
+
+.ubicacion p{
+    
+    color: black;
+    font-size: 18px;
+    padding-right: 1px;
+}
+
+.tituloFinal{
+
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+}
+
+.imagenContact{
+
+    border-style:solid;
+    width: 40%;
+    position: relative;
+    margin-left: 100px;
+    border-radius: 90px;
+    top: 60px;
+    border-color: #654ea3;
+    
+}
+
+.wavefooter{
+
+    position: relative;
+    
 }
