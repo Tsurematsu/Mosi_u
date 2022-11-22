@@ -6,23 +6,26 @@
 
 body{
     font-family: 'Mulish', sans-serif;
+    
 }
 
 /*TEXTO ENCABEZADO*/
-.texto-encabezado h2{
-    margin-left: 342px;
-}
 
-.texto-encabezado{
+.texto-encabezado div{
     top: 10px;
+    position: relative;
     color: white;
     font-size: 25px;
-    text-align:left;
-    margin-left: 70px;
+    text-align:center;
+    padding-left: 70px;
     margin-top: 7%;
-    z-index: 99;
+    /*background: blue;*/
 }
-/*LOGIN*/
+
+.texto-encabezado h2{
+    padding-left: 18%;
+}
+
 /*TITULOS*/
 .titulo{
     color: #654ea3;
@@ -37,14 +40,11 @@ body{
     height: 50%;
     background: #654ea3;  /* fallback for old browsers */
     position:absolute;
-    top: 0;
+    top: 0%;
 }
 
-
-
-
 /*NAVEGACIÓN*/
-.nav{
+nav{
     
     text-align:right;
     padding: 30px 60px 0px 0px;
@@ -63,18 +63,19 @@ nav>a:hover{
 }
 /*WAVES*/
 .wave{
+    
+    height:100%;
     width: 100%;
-    height:auto;
-    position: absolute;
-    top: 70%;
-    left: 0px;
+    position: relative;
+    top: 80px;
+    margin-bottom: 0px;    
+    
 }
 
 /*BODY*/
 .contenedor{
 
     padding: 60px 0;
-    width: auto;
     max-width: 2000px;
     margin-top: 40%;
     overflow: hidden;
@@ -161,5 +162,135 @@ nav>a:hover{
     padding: 2px;
     box-shadow: 0 0 20px 0 #eaafc8;
     margin-right: 5px;
+}
 
+.botones{
+    position: relative;
+    align-content:center;
+    justify-content: right;
+    display: inline-block;
+    height: 5%;
+    
+    /* background-color:red; */
+    top: -360px;
+    padding-left: 750px;
+}
+
+.botones div{
+    position: relative;
+    margin-left: auto;
+    margin-top: auto;
+    width: 500px;
+    padding-top: 20px;
+}
+
+.btn{
+    margin-bottom: 10px;
+    border: 5px solid rgba(100, 100, 100, 0.1);
+    width: 200px;
+    height: 60px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    border-radius: 90px;
+    cursor: pointer;
+    color: white;
+    background-size: 300%;
+    /* margin-bottom: 100px;*/
+    margin-right: 30px; 
+    background-image: linear-gradient(to left, #c471ed, #12c2e9,  #c471ed);
+    transition: 1s;
+    display:inline-block;
+    
+}
+
+.btn:hover{
+    background-position: right;
+    text-decoration: underline
+}
+
+/* FOOTER */
+
+.titulo-contacto{
+
+    position: relative;
+    text-align: center;
+    color: #654ea3;
+    margin-top: -150px;
+    font-size: 40px;
+}
+
+.contacto{
+    background-color:hsla(335, 59%, 80%, 0.267);
+    
+}
+
+.telefono{
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+    color: #654ea3;
+    padding-right: 350px;
+    top: -280px;
+}
+.telefono p{
+    color: black;
+    font-size: 18px;
+    padding-right: 1px;
+}
+
+.correo{
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+    color:#654ea3;
+    padding-right: 350px;
+    top:-220px
+}
+
+.correo p{
+    color: black;
+    font-size: 18px;
+}
+
+
+.ubicacion{
+
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+    color:#654ea3;
+    padding-right: 350px;
+    top: -150px
+}
+
+.ubicacion p{
+    
+    color: black;
+    font-size: 18px;
+    padding-right: 1px;
+}
+
+.tituloFinal{
+
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+}
+
+.imagenContact{
+
+    border-style:solid;
+    width: 40%;
+    position: relative;
+    margin-left: 100px;
+    border-radius: 90px;
+    top: 60px;
+    border-color: #654ea3;
+    
+}
+
+.wavefooter{
+
+    position: relative;
+    
 }
