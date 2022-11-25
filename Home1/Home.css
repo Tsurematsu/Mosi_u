@@ -220,7 +220,7 @@ nav>a:hover{
 }
 
 .contacto{
-    background-color:hsla(335, 59%, 80%, 0.267);
+    background-color:hsla(335, 79%, 39%, 0.267);
     
 }
 
@@ -275,6 +275,7 @@ nav>a:hover{
     position: relative;
     text-align: center;
     font-size: 25px;
+    padding-bottom: 70px;
 }
 
 .imagenContact{
