@@ -20,7 +20,7 @@ Body{
 
 .Panel {
 
-    height: 100vh;
+    height: 1800vh;
     width: 100%;
     display: flex;
     background: url(Png/bg.png);
@@ -48,6 +48,7 @@ Body{
     content: '';
     position: absolute;
     width: 100%;
+
     padding-top: 12%;
     top: -5px;
     left: 0;
