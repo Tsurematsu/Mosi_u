@@ -3,34 +3,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(180deg, rgb(231, 142, 205) 77%, #8368cf 99%);
+    background-image: linear-gradient(180deg, #7F7FD5);
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
     background-attachment: fixed;
   }
 
   body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #de6161;  
+    background: -webkit-linear-gradient(to right, #2657eb, #de6161);
+    background: linear-gradient(to right, #2657eb, #de6161);
     font-family: 'Mulish', sans-serif;
+  
   }
   
+  
   .form-login {
-    width: 400px;
+    width: 550px;
     height: 340px;
-    background: #654ea3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eaafc8, #B852D0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eaafc8, #B852D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin: auto;
-    margin-top: 70px;
-    box-shadow: 7px 13px 37px #000;
+    background: #91EAE4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7F7FD5, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: center;
+    margin-top: 50px;
+    box-shadow: 10px 13px 22px #7F7FD5;
     padding: 20px 30px;
-    border-top: 4px solid #d669c8;
+    border-top: 30px solid white;
     color: white;
   }
   
   .form-login h5 {
-    margin: 0;
+    margin: 15;
     text-align: center;
     height: -170px;
     margin-bottom: 30px;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
     font-size: 20px;
   }
   
@@ -47,27 +59,77 @@
   .buttons {
     width: 100%;
     height: 39px;
-    background: #8368cf;
+    background: #91EAE4;
     border: none;
     color: white;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   
   .form-login p{
-    height: 40px;
+    height: 30px;
     text-align: center;
-    border-bottom: 1px solid;
+    border-bottom: 3px solid;
   }
   
   .form-login a {
     color: white;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
   }
   
   .form-login a:hover {
     text-decoration: underline;
   }
+  
+  @keyframes wave {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 100vw;
+    }
+}
+
+@keyframes wave-reverse {
+    0% {
+        background-position: 100vw;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+  .wave::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(img/wave.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    background-position: absolute;
+    opacity: .4;
+    animation: wave-reverse 7s linear infinite;
+}
+
+.wave::after {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(img/wave.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    opacity: .8;
+    animation-delay: -4s;
+    animation: wave 16s linear infinite;
+}
   
   /*Login*/
   
