@@ -81,25 +81,6 @@
     text-decoration: underline;
   }
   
-  @keyframes wave {
-    0% {
-        background-position: 0;
-    }
-
-    100% {
-        background-position: 100vw;
-    }
-}
-
-@keyframes wave-reverse {
-    0% {
-        background-position: 100vw;
-    }
-
-    100% {
-        background-position: 0;
-    }
-}
   .wave::before {
     content: '';
     position: absolute;
@@ -130,6 +111,28 @@
     animation-delay: -4s;
     animation: wave 16s linear infinite;
 }
+
+@keyframes wave {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 100vw;
+    }
+}
+
+@keyframes wave-reverse {
+    0% {
+        background-position: 100vw;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+  
+  
   
   /*Login*/
   
