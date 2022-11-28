@@ -20,5 +20,13 @@ public class controler {
         return "nodo";
         
     }
+
+
+    @GetMapping(path = "/GetLoger")
+    public static String GetLoger(Model Modelo){
+        resultado=DataBase.TablaUsuarios.GetAdmin();
+        Modelo.addAttribute("results", resultado);
+        return "nodo";
+    }
     
 }

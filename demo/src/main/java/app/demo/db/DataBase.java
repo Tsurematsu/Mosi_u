@@ -7,7 +7,7 @@ public class DataBase {
     
     /**
      * Tabla
-     */
+     */ 
     public static class TablaTiquets {
         public static ArrayList<ObjectTiquets> ArrayTiquets = new ArrayList<>();
         public static class ObjectTiquets {
@@ -19,7 +19,11 @@ public class DataBase {
 
 
     public static class TablaUsuarios {
+        
         public static ArrayList<ObjectRegistos> ArrayUsuario = new ArrayList<>();
+        static String adminNombre = "No se a Logeado ningún administrador";
+        public static String GetAdmin(){return adminNombre;}
+
         public static class ObjectRegistos {
             String cedula;
             String nombre;
@@ -108,10 +112,13 @@ public class DataBase {
             for (String[] objectAdmins : Administradores) {
                 if (objectAdmins[0].equals(NomUser) && objectAdmins[1].equals(password)) {
                     resultado="true";
+                    adminNombre=NomUser;
                 }
             }
             return resultado;
         }
+
+        
     }
 
 

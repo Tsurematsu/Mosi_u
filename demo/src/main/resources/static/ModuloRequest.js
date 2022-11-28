@@ -8,6 +8,10 @@ async function LoginUser(usuario, password) {
     });
 }
 
+async function GetLoger() {
+    return await callScript('../../GetLoger', {});
+}
+
 async function RegistUser(nombre, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero) {
     return await callScript('../../Regist', 
     { 
