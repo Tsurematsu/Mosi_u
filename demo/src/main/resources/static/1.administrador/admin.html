@@ -77,7 +77,7 @@
                     </label>
                 </div>
                 <div class="imagen_usuario">
-                    <img src="img/Burrito.jpg" alt="Usuario">
+                    <img id="ImageUser" src="img/Burrito.jpg" alt="Usuario">
                 </div>
             </div>
             <div class="bienvenida">
@@ -118,6 +118,30 @@
         window.addEventListener('load', async function() {
             let nombre = await GetLoger()
             document.getElementById("Nombreuser").innerHTML = "Administrador " + nombre;
+            let imagen = document.getElementById('ImageUser');
+            switch (nombre) {
+                case "Jorje":
+                    imagen.src = "img/joji.jpg";
+                    break;
+                case "Jose":
+                    imagen.src = "img/jose.jpg";
+                break;
+
+                case "Ardair":
+                    imagen.src = "img/aldair.jpg";
+                break;
+
+                case "Martin":
+                    imagen.src = "img/roys.jpg";
+                break;
+
+                case "Roys":
+                    imagen.src = "img/yop.jpg";
+                break;
+        
+                default:
+                    break;
+            }
         });
     </script>
 </body>
