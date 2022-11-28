@@ -103,8 +103,9 @@ public class DataBase {
 
         }
 
-        public static void Login(String NomUser, String password, Runnable correct, Runnable error){
-            
+        public static String Login(String NomUser, String password){
+            String resultado = "hola pepe";
+            return resultado;
         }
     }
     
