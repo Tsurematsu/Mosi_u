@@ -3,7 +3,7 @@ package app.demo.db;
 import java.util.ArrayList;
 
 public class DataBase {
-    String[][] Administradores= new String[][]{{"Jorge", "joji"}, {"Martin", "martin123"}, {"Aldair", "#AldairSoftwareDeveloment"}, {"Roys", "roys123"}, {"Jose", "admin"}};
+    static String[][] Administradores= new String[][]{{"Jorge", "joji"}, {"Martin", "martin123"}, {"Aldair", "#AldairSoftwareDeveloment"}, {"Roys", "roys123"}, {"Jose", "admin"}};
     
     /**
      * Tabla
@@ -104,14 +104,12 @@ public class DataBase {
         }
 
         public static String Login(String NomUser, String password){
-            String resultado = "No se a introducido nada";
-            if (NomUser.equals("Pepe") && password.equals("1234")) {
-                resultado= "Bienvenido pepe";
+            String resultado = "false";
+            for (String[] objectAdmins : Administradores) {
+                if (objectAdmins[0].equals(NomUser) && objectAdmins[1].equals(password)) {
+                    resultado="true";
+                }
             }
-            if (NomUser.equals("Juan") && password.equals("1234")) {
-                resultado= "Bienvenido Zorra";
-            }
-            
             return resultado;
         }
     }
