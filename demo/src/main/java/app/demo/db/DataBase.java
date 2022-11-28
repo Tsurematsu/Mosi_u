@@ -21,7 +21,7 @@ public class DataBase {
     public static class TablaUsuarios {
         
         public static ArrayList<ObjectRegistos> ArrayUsuario = new ArrayList<>();
-        static String adminNombre = "No se a Logeado ningún administrador";
+        static String adminNombre = "No Logeado";
         public static String GetAdmin(){return adminNombre;}
 
         public static class ObjectRegistos {
