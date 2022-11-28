@@ -1,10 +1,13 @@
 
 
 function CallStript(usuario, password) {
-    var miAjax = new Request({
-        "url": "recibo-post.php",
-        "onSuccess": function(respuesta){
-           $("contenedorajax").set("html", respuesta);
+    $.ajax({
+        url: 'Login',
+        data: { 'user' : usuario, 'pasword':password },
+        type: "GET",
+        success: function(result) {
+            alert(result);
         }
-     }).send({"data": "provincia=malaga&ciudad=marbella"});
+    });
+    
 }
