@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Mulish', sans-serif;
+    max-width: max-content;
     
 }
 
@@ -41,9 +42,6 @@ body{
     background: #654ea3;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to bottom, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
 
     position:absolute;
     top: 0%;
@@ -165,6 +163,7 @@ nav>a:hover{
     position: relative;
     align-content:center;
     justify-content: right;
+    max-width:20px;
     display: inline-block;
     height: 5%;
     /* background-color:red; */
@@ -220,8 +219,7 @@ nav>a:hover{
     background: #654ea3;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to top, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to top, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    
+max-width:100%;
 }
 
 .telefono{
@@ -231,6 +229,7 @@ background: linear-gradient(to top, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Fir
     color: white;
     padding-right: 300px;
     top: -280px;
+    
 }
 .telefono p{
     color: black;
