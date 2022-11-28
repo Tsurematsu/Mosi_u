@@ -34,9 +34,9 @@
     boton.addEventListener("click", async ()=>{
       let resultado = await LoginUser("userInput", "passInput");
       if (resultado=="true") {
-        
+        href = "../../1.administrador/admin.html"
       }else if (resultado=="false") {
-        
+        alert("¡¡Contraseña Incorrecta!!")
       }
     });
   </script>
