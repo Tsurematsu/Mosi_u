@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="Regist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="formularioAdmin.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../../ModuloRequest.js"></script>
+</head>
+<body>
+  <div>
+    <div class="wave"></div>
+    <div class="container">
+        <div class="title">¡Registra los consumos!</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Tipo de Transporte</span>
+                <select name="" id="input1">
+                    <option value="0">Seleccione el Tipo de Transporte</option>
+                    <option value="1">Transporte Terrestre</option>
+                    <option value="2">Transporte Aereo</option>
+                </select>
+              </div>
+              <div class="input-box">
+                <span class="details">Valor Transporte</span>
+                <input type="number" placeholder="Valor Transporte" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Tipo de Hospedaje</span>
+                <input type="text" placeholder="Tipo de Hospedaje" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Valor de Hospedaje</span>
+                <input type="number" placeholder="Cuanto costará el Hospedaje" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Tipo de Servicio</span>
+                <select name="" id="input1">
+                    <option value="0">Seleccione los Servicios</option>
+                    <option value="1">Servicio Basic</option>
+                    <option value="2">Servicio Medium</option>
+                    <option value="2">Servicio Premium</option>
+
+                </select>
+              </div>
+              <div class="input-box">
+                <span class="details">Valor de Servicio</span>
+                <input type="number" placeholder="Valor de Servicio" required>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Registrar">
+            </div>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

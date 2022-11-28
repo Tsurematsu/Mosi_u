@@ -24,6 +24,7 @@ Body{
     width: 100%;
     display: flex;
     background: url(Png/bg.png);
+    background: linear-gradient(  #eaafc8  30%, #654ea3 80%);
     background-size: cover;
 
 }
