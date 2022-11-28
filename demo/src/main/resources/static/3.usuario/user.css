@@ -28,11 +28,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     background-position-y: 10px;
     color: white;    
 }
-/* 
-display: inline-block;
-    text-align: center;
-    margin-left: 40px;
-     */
+
+    /* 
+        display: inline-block;
+        text-align: center;
+        margin-left: 40px;
+    */
+
 #SubHead{
     padding-top: 30px;
     display: inline-block;
