@@ -3,7 +3,7 @@ package app.demo.db;
 import java.util.ArrayList;
 
 public class DataBase {
-    static String[][] Administradores= new String[][]{{"Jorge", "joji"}, {"Martin", "martin123"}, {"Aldair", "#AldairSoftwareDeveloment"}, {"Roys", "roys123"}, {"Jose", "admin"}};
+    static String[][] Administradores= new String[][]{{"Jorge", "joji"}, {"Martin", "martin123"}, {"Aldair", "#AldairSoftwareDevelopment"}, {"Roys", "roys123"}, {"Jose", "admin"}};
     
     /**
      * Tabla
