@@ -15,7 +15,6 @@ public class controler {
     public static String Login(Model Modelo,  
     @RequestParam(name = "user", required = false, defaultValue = "nothing") String usuario, 
     @RequestParam(name = "pasword", required = false, defaultValue = "nothing") String password){
-        
         resultado=DataBase.TablaUsuarios.Login(usuario, password);
         Modelo.addAttribute("results", resultado);
         return "nodo";
