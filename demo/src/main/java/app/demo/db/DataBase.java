@@ -115,8 +115,8 @@ public class DataBase {
             return resultado;
         }
     }
-    
-    
+
+
     public static class TablaAdministrador {
         public static ArrayList<ObjectAdministrador> ArrayAdministrador = new ArrayList<>();
         public static class ObjectAdministrador {
