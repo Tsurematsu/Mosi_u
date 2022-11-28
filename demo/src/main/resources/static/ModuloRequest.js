@@ -9,7 +9,7 @@ async function LoginUser(usuario, password) {
 }
 
 async function RegistUser(usuario, password) {
-    return await callScript('../../Login', 
+    return await callScript('re', 
     { 
         'user' : document.getElementById(usuario).value, 
         'pasword':document.getElementById(password).value 
