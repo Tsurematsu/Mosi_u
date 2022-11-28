@@ -23,8 +23,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     position: absolute;
     top: -10px;
     width: 100%;
-    height: 500px;
-    background: linear-gradient( #654ea3 30%, #eaafc8 80%);
+    height: 120vh;
+    background: linear-gradient(  #eaafc8  30%, #654ea3 80%);
     background-position-y: 10px;
     color: white;    
 }
