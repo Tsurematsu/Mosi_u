@@ -8,7 +8,7 @@ async function LoginUser(usuario, password) {
     });
 }
 
-async function RegistUser(usuario, password) {
+async function RegistUser(nombre, apellido, correo, telefono, contraseña, confirmacion, universidad, fechaNacmiento, genero) {
     return await callScript('re', 
     { 
         'user' : document.getElementById(usuario).value, 
