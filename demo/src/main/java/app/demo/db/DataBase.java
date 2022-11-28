@@ -111,7 +111,7 @@ public class DataBase {
             String resultado = "false";
             for (String[] objectAdmins : Administradores) {
                 if (objectAdmins[0].equals(NomUser) && objectAdmins[1].equals(password)) {
-                    resultado="true";
+                    resultado="admin";
                     adminNombre=NomUser;
                 }
             }

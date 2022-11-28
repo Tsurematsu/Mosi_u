@@ -33,8 +33,10 @@
     boton = document.getElementById("Ingresar")
     boton.addEventListener("click", async ()=>{
       let resultado = await LoginUser("userInput", "passInput");
-      if (resultado=="true") {
+      if (resultado=="admin") {
         window.location.href = "../../1.administrador/admin.html";
+      }else if (resultado=="user") {
+        window.location.href = "../../3.usuario/user.html";
       }else if (resultado=="false") {
         alert("¡¡Contraseña Incorrecta!!")
       }
