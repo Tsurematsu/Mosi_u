@@ -104,7 +104,14 @@ public class DataBase {
         }
 
         public static String Login(String NomUser, String password){
-            String resultado = "hola pepe";
+            String resultado = "No se a introducido nada";
+            if (NomUser.equals("Pepe") && password.equals("1234")) {
+                resultado= "Bienvenido pepe";
+            }
+            if (NomUser.equals("Juan") && password.equals("1234")) {
+                resultado= "Bienvenido Zorra";
+            }
+            
             return resultado;
         }
     }
@@ -113,7 +120,6 @@ public class DataBase {
     public static class TablaAdministrador {
         public static ArrayList<ObjectAdministrador> ArrayAdministrador = new ArrayList<>();
         public static class ObjectAdministrador {
-            
             
         }
     }

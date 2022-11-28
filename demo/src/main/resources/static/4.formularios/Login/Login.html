@@ -9,15 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../../ModuloRequest.js"></script>
   </head>
   
   <section class="form-login">
       <h5>Inicia Sesion</h5>
-      <input class="controls"type="text" name="usuario" value="" placeholder="Usuario">
-      <input class="controls"type="password" name="contrasena" value="" placeholder="Contraseña">
-      <input class="buttons" type="submit" name="ingresar" value="Ingresar">
-        
-      
+      <input class="controls"type="text" id="userInput" name="usuario" value="" placeholder="Usuario">
+      <input class="controls"type="password" id="passInput" name="contraseña" value="" placeholder="Contraseña">
+      <input id="Ingresar" class="buttons" type="submit" name="ingresar" value="Ingresar">
+
       <p><a href="#">¿Olvidastes tu Contraseña?</a></p
     
   </section>
@@ -26,4 +29,16 @@
   <div class="wave"></div>
   <div class="wavefooter">
     
+  <script>
+    boton = document.getElementById("Ingresar")
+    boton.addEventListener("click", async ()=>{
+      let resultado = await LoginUser("userInput", "passInput");
+      if (resultado=="true") {
+        
+      }else if (resultado=="false") {
+        
+      }
+    });
+  </script>
+  
 </html>
