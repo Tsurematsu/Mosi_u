@@ -23,41 +23,41 @@
             <div class="user-details">
               <div class="input-box">
                 <span class="details">Nombre</span>
-                <input type="text" id="input1" placeholder="Ingresa tu Nombre" required>
+                <input type="text" id="nombre" placeholder="Ingresa tu Nombre" required>
               </div>
               <div class="input-box">
                 <span class="details">Apellido</span>
-                <input type="text" placeholder="Ingresa tu Apellido" required>
+                <input type="text"  id="apellido" placeholder="Ingresa tu Apellido" required>
               </div>
               <div class="input-box">
                 <span class="details">Correo Electronico</span>
-                <input type="text" placeholder="Ingresa un Correo" required>
+                <input type="text" id="correo" placeholder="Ingresa un Correo" required>
               </div>
               <div class="input-box">
                 <span class="details">Numero de Telefono</span>
-                <input type="text" placeholder="Ingresa un Telefono" required>
+                <input type="text" id="telefono" placeholder="Ingresa un Telefono" required>
               </div>
               <div class="input-box">
                 <span class="details">Contraseña</span>
-                <input type="password" placeholder="Ingresa tu Contraseña" required>
+                <input type="password" id="contraseña" placeholder="Ingresa tu Contraseña" required>
               </div>
               <div class="input-box">
                 <span class="details">Confirma Contraseña</span>
-                <input type="password" placeholder="Repite la Contraseña" required>
+                <input type="password" id="confirContraseña" placeholder="Repite la Contraseña" required>
               </div>
               <div class="input-box">
                 <span class="details">Universidad</span>
-                <input type="text" placeholder="Universidad a la que perteneces" required>
+                <input type="text" id="universidad" placeholder="Universidad a la que perteneces" required>
               </div>
               <div class="input-box">
                 <span class="details">Fecha de Nacimiento</span>
-                <input type="date" required>
+                <input type="date" id="fechaNacimiento" required>
               </div>
             </div>
             <div class="gender-details">
-              <input type="radio" name="gender" id="dot-1">
-              <input type="radio" name="gender" id="dot-2">
-              <input type="radio" name="gender" id="dot-3">
+              <input type="radio" id="Hombre" name="gender" id="dot-1">
+              <input type="radio" id="Mujer" name="gender" id="dot-2">
+              <input type="radio" id="Otro" name="gender" id="dot-3">
               <span class="gender-title">Genero</span>
               <div class="category">
                 <label for="dot-1">
@@ -87,7 +87,7 @@
       <script>
         boton = document.getElementById("Ingresar")
         boton.addEventListener("click", async ()=>{
-          let resultado = await RegistUser("input1", "input2", "input3");
+          let resultado = await RegistUser("nombre", "apellido", "correo", "telefono", "contraseña", "confirContraseña", "universidad", "fechaNacmiento", "genero");
           if (resultado=="true") {
             
           }else if (resultado=="false") {
