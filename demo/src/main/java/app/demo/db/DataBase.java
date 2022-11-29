@@ -19,8 +19,8 @@ public class DataBase {
             HotelesList.add("The Morgana Polado Suites");
             HotelesList.add("Hotel San Fernando Plaza");
             HotelesList.add("Hotel Poblado Alejandria");
-            City.add(new ObjectCity("Medellín", 10, 10, 10, HotelesList));
-                
+            City.add(new ObjectCity("Medellín", 260000, -80, 100, HotelesList));
+                                                                //Precio                       X               Y 
 
             //BOGOTA
             HotelesList = new ArrayList<>();
@@ -29,7 +29,8 @@ public class DataBase {
             HotelesList.add("Hotel Santa Barbara Real");
             HotelesList.add("Black Bogotá");
             HotelesList.add("Tryp Bogotá Embajada");
-            City.add(new ObjectCity("Bogotá", 100, 10, 10, HotelesList));
+            City.add(new ObjectCity("Bogotá", 285000, 0, 0, HotelesList));
+                                                                //Precio                       X               Y 
             
 
             //SANTA MARTA
@@ -39,7 +40,8 @@ public class DataBase {
             HotelesList.add("Hotel Mercure Emile");
             HotelesList.add("Sanha Plus Hotel");
             HotelesList.add("Portobahia Hotel");
-            City.add(new ObjectCity("Santa Marta", 100, 10, 10, HotelesList));
+            City.add(new ObjectCity("Santa Marta", 200000, 0, 180, HotelesList));
+                                                                //Precio                       X               Y 
             
 
             // Barranquilla
@@ -49,7 +51,8 @@ public class DataBase {
             HotelesList.add("Movich Buro 51.");
             HotelesList.add("Country International Hotel");
             HotelesList.add("Hotel Costa Linda.");
-            City.add(new ObjectCity("Barranquilla", 100, 10, 10, HotelesList));
+            City.add(new ObjectCity("Barranquilla", 2250000, -20, 160, HotelesList));
+                                                                //Precio                       X               Y 
             
 
             //VILLAVICENIO
@@ -59,7 +62,8 @@ public class DataBase {
             HotelesList.add("Confort Plaza Hotel");
             HotelesList.add("Hotel Fontana Mar");
             HotelesList.add("VVC HOTELS");
-            City.add(new ObjectCity("Villavicencio", 100, 10, 10, HotelesList));
+            City.add(new ObjectCity("Villavicencio", 180000, 15, 30, HotelesList));
+                                                                //Precio                       X               Y 
             
             
             // Bucaramanga
@@ -69,8 +73,10 @@ public class DataBase {
             HotelesList.add("Hotel Mercure Emile");
             HotelesList.add("Sanha Plus Hotel");
             HotelesList.add("Portobahia Hotel");
-            City.add(new ObjectCity("Bucaramanga", 100, 10, 10, HotelesList));
+            City.add(new ObjectCity("Bucaramanga", 150000, -20, 40, HotelesList));
+                                                                //Precio                       X               Y 
             
+
             // Cartagena
             HotelesList = new ArrayList<>();
             HotelesList.add("Hotel Capilla Del Mar");
@@ -78,7 +84,8 @@ public class DataBase {
             HotelesList.add("Hotel Cartagena Plaza");
             HotelesList.add("Hotel Almirante Cartagena");
             HotelesList.add("Americas Torre del Mar");
-            City.add(new ObjectCity("Cartagena", 100, 10, 10, HotelesList));
+            City.add(new ObjectCity("Cartagena", 270000, -40, 140, HotelesList));
+                                                                //Precio                       X               Y 
 
             
             // #UNIVERSIDADES DE MEDELLIN
@@ -146,7 +153,6 @@ public class DataBase {
 
             public String DepartamentoIn ="";
             public String LocalidadIn ="";
-            
             
             public String FechaVuelo ="";
             public String HoraVuelo ="";
