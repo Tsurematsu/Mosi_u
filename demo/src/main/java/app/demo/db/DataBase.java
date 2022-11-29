@@ -2,7 +2,6 @@ package app.demo.db;
 
 import java.util.ArrayList;
 
-import javax.swing.Spring;
 
 public class DataBase {
     /**
@@ -139,7 +138,9 @@ public class DataBase {
             Universidades.add("Universidad del Sinú (UNISINU)");
             Universidades.add("Universidad de Cartagena");
             
-            ArrayAdministrador.add(new ObjectAdministrador(City.get(0), City.get(1), 100, "Tierra"));
+            ArrayAdministrador.add(new ObjectAdministrador(City.get(0), City.get(1), "Basic", "Tierra"));
+            ArrayAdministrador.add(new ObjectAdministrador(City.get(0), City.get(2), "Premiun", "Tierra"));
+            ArrayAdministrador.add(new ObjectAdministrador(City.get(0), City.get(3), "Ejecutivo", "Aire"));
 
         }
     }
@@ -234,7 +235,7 @@ public class DataBase {
         static String adminNombre = "No Logeado";
         static String userNombre = "No Logeado";
         public static Integer SelectUser = -1;
-        public static String GetAdmin(){return adminNombre;}
+        public static String GetLoger(){return adminNombre;}
         public static String GetUser(){return userNombre;}
 
         public static class ObjectUsers  {
@@ -317,16 +318,27 @@ public class DataBase {
             }
         }
         
-        public static String Registro(String usuario, String apellido, String correo, String telefono, String contraseña, String confirContraseña, String universidad, String fechaNacmiento, String genero){
+        public static String Regist(String usuario, String apellido, String correo, String telefono, String contraseña, String confirContraseña, String universidad, String fechaNacmiento, String genero){
             String resultado = "false";
             boolean existe = false;
+
+            boolean byPass=false;
+            if (usuario.length()>0 && 
+                apellido.length()>0  && 
+                correo.length()>0  && 
+                telefono.length()>0  && 
+                contraseña.length()>0  && 
+                confirContraseña.length()>0  && 
+                fechaNacmiento.length()>0) {
+                    byPass=true;
+            }
 
             for (ObjectUsers usuarios : ArrayUsuario) {
                 if (usuarios.getCorreoElectronico().equals(correo)) {
                     existe = true;
                 }
             }
-            if (!existe) {
+            if (!existe && byPass) {
                 if (contraseña.equals(confirContraseña)) {
                     ArrayUsuario.add(new ObjectUsers("", usuario, apellido, fechaNacmiento,telefono, correo, contraseña, universidad, genero));
                     resultado= "true";
@@ -364,17 +376,28 @@ public class DataBase {
         public static ArrayList<ObjectCity> City = new ArrayList<>();
         public static ArrayList<String> Universidades = new ArrayList<>();
         
+        public static String GetDrivers(Integer Ciudad1, Integer Ciudad2, Integer tipoPlan, Integer tipoVuelo){
+            String retorno = "";
+            // retorno += "Avion " + (i<City.size()-1?",":"");
+            return retorno;
+        } 
+        public static String GetCiudad(){
+            String retorno = "";
+            for (int i = 0; i < City.size(); i++) {
+                retorno += City.get(i).NombreCiudad + (i<City.size()-1?",":"");
+            }
+            return retorno;
+        }
 
         public static class ObjectAdministrador {
             ObjectCity Ciudad1;
             ObjectCity Ciudad2;
-            Integer PrecioAgregado;
+            String TipoPLan;
             String  TipoTransporte;
-            public ObjectAdministrador(ObjectCity ciudad1, ObjectCity ciudad2, Integer precioAgregado,
-                    String tipoTransporte) {
+            public ObjectAdministrador(ObjectCity ciudad1, ObjectCity ciudad2, String tipoPLan, String tipoTransporte) {
                 Ciudad1 = ciudad1;
                 Ciudad2 = ciudad2;
-                PrecioAgregado = precioAgregado;
+                TipoPLan = tipoPLan;
                 TipoTransporte = tipoTransporte;
             }
             public ObjectCity getCiudad1() {
@@ -389,11 +412,11 @@ public class DataBase {
             public void setCiudad2(ObjectCity ciudad2) {
                 Ciudad2 = ciudad2;
             }
-            public Integer getPrecioAgregado() {
-                return PrecioAgregado;
+            public String getTipoPLan() {
+                return TipoPLan;
             }
-            public void setPrecioAgregado(Integer precioAgregado) {
-                PrecioAgregado = precioAgregado;
+            public void setTipoPLan(String tipoPLan) {
+                TipoPLan = tipoPLan;
             }
             public String getTipoTransporte() {
                 return TipoTransporte;
@@ -401,9 +424,8 @@ public class DataBase {
             public void setTipoTransporte(String tipoTransporte) {
                 TipoTransporte = tipoTransporte;
             }
-            
+        
         }
-
         public static class ObjectCity {
             String NombreCiudad="";
             Integer PrecioXkilometro=0;

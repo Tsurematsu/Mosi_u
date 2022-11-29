@@ -88,7 +88,7 @@
       <script>
         boton = document.getElementById("Ingresar")
         boton.addEventListener("click", async ()=>{
-          let resultado = await RegistUser("nombre", "apellido", "correo", "telefono", "contraseña", "confirContraseña", "universidad", "fechaNacimiento", "");
+          let resultado = await Regist("nombre", "apellido", "correo", "telefono", "contraseña", "confirContraseña", "universidad", "fechaNacimiento", "");
           if (resultado=="true") {
             window.location.href = "../../4.formularios/Login/Login.html"
           }else if (resultado=="false") {

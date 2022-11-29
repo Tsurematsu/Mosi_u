@@ -32,7 +32,7 @@
   <script>
     boton = document.getElementById("Ingresar")
     boton.addEventListener("click", async ()=>{
-      let resultado = await LoginUser("userInput", "passInput");
+      let resultado = await Login("userInput", "passInput");
       if (resultado=="admin") {
         window.location.href = "../../1.administrador/admin.html";
       }else if (resultado=="user") {

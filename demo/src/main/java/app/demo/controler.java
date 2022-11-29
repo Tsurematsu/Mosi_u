@@ -32,7 +32,7 @@ public class controler {
     @RequestParam(name = "universidad", required = false, defaultValue = "nothing") String universidad,
     @RequestParam(name = "fechaNacmiento", required = false, defaultValue = "nothing") String fechaNacmiento,
     @RequestParam(name = "genero", required = false, defaultValue = "nothing") String genero){
-        resultado=DataBase.TablaUsuarios.Registro(usuario, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero);
+        resultado=DataBase.TablaUsuarios.Regist(usuario, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero);
         Modelo.addAttribute("results", resultado);
         return "nodo";
     }
@@ -40,9 +40,37 @@ public class controler {
 
     @GetMapping(path = "/GetLoger")
     public static String GetLoger(Model Modelo){
-        resultado=DataBase.TablaUsuarios.GetAdmin();
+        resultado=DataBase.TablaUsuarios.GetLoger();
         Modelo.addAttribute("results", resultado);
         return "nodo";
     }
+
+
+    @GetMapping(path = "/GetCiudad")
+    public static String GetCiudad(Model Modelo){
+        resultado=DataBase.TablaAdministrador.GetCiudad();
+        Modelo.addAttribute("results", resultado);
+        return "nodo";
+        
+    }
+
+
+    @GetMapping(path = "/GetDrivers")
+    public static String GetDrivers(Model Modelo, 
+    @RequestParam(name = "Ciudad1", required = false, defaultValue = "nothing") String Ciudad1, 
+    @RequestParam(name = "Ciudad2", required = false, defaultValue = "nothing") String Ciudad2,
+    @RequestParam(name = "tipoPlan", required = false, defaultValue = "nothing") String tipoPlan,
+    @RequestParam(name = "tipoVuelo", required = false, defaultValue = "nothing") String tipoVuelo
+    ){
+        resultado=DataBase.TablaAdministrador.GetDrivers(
+            Integer.valueOf(Ciudad1), 
+            Integer.valueOf(Ciudad2), 
+            Integer.valueOf(tipoPlan), 
+            Integer.valueOf(tipoVuelo));
+        Modelo.addAttribute("results", resultado);
+        return "nodo";
+        
+    }
+    
     
 }

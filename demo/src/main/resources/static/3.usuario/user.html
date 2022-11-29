@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="../3.usuario/user.css">
         <script src="./ModuloRequest.js"></script>
         <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../../ModuloRequest.js"></script>
 </head>
 
 <body>
@@ -44,24 +46,24 @@
 
             <div class="sub_Panel">
                 <label class="TituloPanel">Punto de partida</label>
-                <select class="Entradas" name="" id="">
+                <select id="Ciudad1" class="Entradas" name="" id="">
                     <option value="">Ciudades</option>
                     <option value="">Ccartagena</option>
                 </select>
 
-                <select style="opacity: 0;" class="Entradas" name="" id="">
+                <select disabled style="opacity: 0;" class="Entradas" name="" id="">
                     <!-- <option value="">Localidad</option>
                     <option value="">Cartagena</option>
                     <option value="">Etc</option> -->
                 </select>
 
                 <label class="TituloPanel">Punto de llegada</label>
-                <select class="Entradas" name="" id="">
+                <select id="Ciudad2" class="Entradas" name="" id="">
                     <option value="">Ciudades</option>
                     <option value="">Ccartagena</option>
                 </select>
 
-                <select style="opacity: 0;" class="Entradas" name="" id="">
+                <select disabled style="opacity: 0;" class="Entradas" name="" id="">
                     <!-- <option value="">Localidad</option>
                     <option value="">Cartagena</option>
                     <option value="">Etc</option> -->
@@ -91,7 +93,7 @@
 
             <div class="sub_Panel" style="display: inline-block;">
                 <label class="TituloPanel">Viajes disponibles</label>
-                <ul class="Entradas">
+                <ul id="Resultados" class="Entradas">
                     <li>Kilometro</li>
                     <li>vuelo 2 900.000$</li>
                     <li>vuelo 3 900.000$</li>
@@ -119,6 +121,24 @@
         </div>
 
     </div>
+    <script>
+        window.addEventListener('load', async function() {
+            let request = await GetCiudad();
+            let arrayList = request.split(',');
+            let Resultado = "<option value=''>Ciudades</option>";
+            for (let i = 0; i < arrayList.length; i++) {
+                const element = arrayList[i];
+                Resultado +="\n<option value=''>" + element + "</option>"
+            }
+            document.getElementById("Ciudad1").innerHTML = Resultado;
+            document.getElementById("Ciudad2").innerHTML = Resultado;
+
+        });
+
+        function LoadResults() {
+            
+        }
+    </script>
     <script src="user.js"></script>
 </body>
 

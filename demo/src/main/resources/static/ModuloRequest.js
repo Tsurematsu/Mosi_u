@@ -1,6 +1,6 @@
 
 
-async function LoginUser(correo, password) {
+async function Login(correo, password) {
     return await callScript('../../Login', 
     { 
         'correo' : document.getElementById(correo).value, 
@@ -10,7 +10,7 @@ async function LoginUser(correo, password) {
 
 async function GetLoger() {return await callScript('../../GetLoger', {});}
 
-async function RegistUser(nombre, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero) {
+async function Regist(nombre, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero) {
 
     return await callScript('../../Regist', 
     { 
@@ -28,19 +28,25 @@ async function RegistUser(nombre, apellido, correo, telefono, contraseña, confi
 }
 
 async function RegistCard(usuario, password) {
-    return await callScript('../../Login', 
+    return await callScript('../../RegistCard', 
     { 
         'user' : document.getElementById(usuario).value, 
         'pasword':document.getElementById(password).value 
     });
 }
 
-async function UpdateAdmin(usuario, password) {
-    return await callScript('../../Login', 
+async function GetDrivers(Ciudad1, Ciudad2, tipoPlan, tipoVuelo) {
+    return await callScript('../../GetDrivers', 
     { 
-        'user' : document.getElementById(usuario).value, 
-        'pasword':document.getElementById(password).value 
+        'Ciudad1' : Ciudad1, 
+        'Ciudad2':Ciudad2,
+        'tipoPlan':tipoPlan, 
+        'tipoVuelo':tipoVuelo,
     });
+
+}
+async function GetCiudad() {
+    return await callScript('../../GetCiudad', {});
 }
 
 async function callScript(ruta, params) {
