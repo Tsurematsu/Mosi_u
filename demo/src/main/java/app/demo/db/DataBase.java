@@ -103,8 +103,10 @@ public class DataBase {
             }
         }
         
-        public static void Registro(){
-
+        public static String Registro(String usuario, String apellido, String correo, String telefono, String contraseña, String confirContraseña, String universidad, String fechaNacmiento, String genero){
+            String resultado = "false";
+            
+            return resultado;
         }
 
         public static String Login(String NomUser, String password){

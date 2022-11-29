@@ -21,6 +21,23 @@ public class controler {
         
     }
 
+    @GetMapping(path = "/Regist")
+    public static String Regist(Model Modelo,  
+    @RequestParam(name = "nombre", required = false, defaultValue = "nothing") String usuario, 
+    @RequestParam(name = "apellido", required = false, defaultValue = "nothing") String apellido, 
+    @RequestParam(name = "correo", required = false, defaultValue = "nothing") String correo, 
+    @RequestParam(name = "telefono", required = false, defaultValue = "nothing") String telefono,
+    @RequestParam(name = "contraseña", required = false, defaultValue = "nothing") String contraseña,
+    @RequestParam(name = "confirContraseña", required = false, defaultValue = "nothing") String confirContraseña,
+    @RequestParam(name = "universidad", required = false, defaultValue = "nothing") String universidad,
+    @RequestParam(name = "fechaNacmiento", required = false, defaultValue = "nothing") String fechaNacmiento,
+    @RequestParam(name = "genero", required = false, defaultValue = "nothing") String genero){
+        resultado=DataBase.TablaUsuarios.Registro(usuario, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero);
+        Modelo.addAttribute("results", resultado);
+        return "nodo";
+        
+    }
+
 
     @GetMapping(path = "/GetLoger")
     public static String GetLoger(Model Modelo){
