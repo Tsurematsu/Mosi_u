@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../3.usuario/user.css">
         <script src="./ModuloRequest.js"></script>
         <title>Document</title>
-    <script src="../jquery-3.6.0.min.js"></script>
+    <!-- <script src="../jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="../../ModuloRequest.js"></script>
 </head>
@@ -149,23 +149,23 @@
             }
             document.getElementById("Ciudad2").innerHTML = Resultado1;
 
-            LoadResults();
+            // LoadResults();
         });
 
         function LoadResults() {
-            setTimeout(() => {
-                let request = GetDrivers(selectCiudad1, selectCiudad2, TipoPlan, TipoTansporte);
-                let arrayList = request.split(',');
+            // setTimeout(() => {
+            //     let request = GetDrivers(selectCiudad1, selectCiudad2, TipoPlan, TipoTansporte);
+            //     let arrayList = request.split(',');
 
-                let Resultado1 = "";
-                for (let i = 0; i < arrayList.length; i++) {
-                    const element = arrayList[i];
-                    Resultado + "<li>" + element + "</li>";
-                }
-                document.getElementById("Resultados").innerHTML = Resultado1;
-                LoadResults(); 
-                
-            }, 2000);
+            //     let Resultado1 = "";
+            //     for (let i = 0; i < arrayList.length; i++) {
+            //         const element = arrayList[i];
+            //         Resultado + "<li>" + element + "</li>";
+            //     }
+            //     document.getElementById("Resultados").innerHTML = Resultado1;
+            //     LoadResults(); 
+
+            // }, 2000);
         }
     </script>
     <script src="user.js"></script>
