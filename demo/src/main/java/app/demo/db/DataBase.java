@@ -378,7 +378,9 @@ public class DataBase {
         
         public static String GetDrivers(Integer Ciudad1, Integer Ciudad2, Integer tipoPlan, Integer tipoVuelo){
             String retorno = "";
-            // retorno += "Avion " + (i<City.size()-1?",":"");
+            for (int i = 0; i < 3; i++) {
+                retorno += "Elemento " + (i<3-1?",":"");
+            }
             return retorno;
         } 
         public static String GetCiudad(){

@@ -12,12 +12,19 @@
         <link rel="stylesheet" href="../3.usuario/user.css">
         <script src="./ModuloRequest.js"></script>
         <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="../../ModuloRequest.js"></script>
 </head>
 
 <body>
     <div id="Header">
+        <script>
+            let TipoPlan = 0;
+            let TipoTansporte = 0;
+            let selectCiudad1 = 0;
+            let selectCiudad2 = 0;
+        </script>
         <div id="SubHead">
             <div style="margin-left: 20px; text-align: left; width: 200px; float: left;">
                 <h1>Mosi_u</h1>
@@ -80,13 +87,13 @@
 
                 <label class="TituloPanel">Tipo de entrada</label>
                 <select class="Entradas" name="" id="">
-                    <option value="">Ejecutivo</option>
-                    <option value="">Premiun</option>
+                    <option onclick="()=>{TipoPlan = 0}" value="">Ejecutivo</option>
+                    <option onclick="()=>{TipoPlan = 1}" value="">Premiun</option>
                 </select>
 
                 <select class="Entradas" name="" id="">
-                    <option value="">Aire</option>
-                    <option value="">Tierra</option>
+                    <option  onclick="()=>{TipoTansporte= 0}" value="">Aire</option>
+                    <option  onclick="()=>{ TipoTansporte=1}" value="">Tierra</option>
                 </select>
 
             </div>
@@ -122,21 +129,42 @@
 
     </div>
     <script>
+
+        
         window.addEventListener('load', async function() {
             let request = await GetCiudad();
             let arrayList = request.split(',');
-            let Resultado = "<option value=''>Ciudades</option>";
+
+            let Resultado = "<option class='options' value='Ciudades'>Ciudades</option>";
             for (let i = 0; i < arrayList.length; i++) {
                 const element = arrayList[i];
-                Resultado +="\n<option value=''>" + element + "</option>"
+                Resultado +="\n<option  onclick='()=>{ selectCiudad1=" + i + "}' class='options' value='" + element + "'>" + element + "</option>"
             }
             document.getElementById("Ciudad1").innerHTML = Resultado;
-            document.getElementById("Ciudad2").innerHTML = Resultado;
-            
+
+            let Resultado1 = "<option class='options' value='Ciudades'>Ciudades</option>";
+            for (let i = 0; i < arrayList.length; i++) {
+                const element = arrayList[i];
+                Resultado +="\n<option  onclick='()=>{ selectCiudad2=" + i + "}' class='options' value='" + element + "'>" + element + "</option>"
+            }
+            document.getElementById("Ciudad2").innerHTML = Resultado1;
+
+            LoadResults();
         });
 
         function LoadResults() {
-            
+            setTimeout(() => {
+                let request = GetDrivers(selectCiudad1, selectCiudad2, TipoPlan, TipoTansporte);
+                let arrayList = request.split(',');
+
+                let Resultado1 = "";
+                for (let i = 0; i < arrayList.length; i++) {
+                    const element = arrayList[i];
+                    Resultado + "<li>" + element + "</li>";
+                }
+                document.getElementById("Resultados").innerHTML = Resultado1;
+                LoadResults(); 
+            }, 2000);
         }
     </script>
     <script src="user.js"></script>
