@@ -152,8 +152,10 @@
     <script>
         document.getElementById("botongen").addEventListener("click", ()=>{
             document.getElementById("panelTiquet").style.display = "block"
-            alert('Se ha generado tu tiquet');
-            window.location.href='../index.html'
+            // alert('Se ha generado tu tiquet');
+            setTimeout(() => {
+                window.location.href='../index.html'
+            }, 2000);
         })
         
         window.addEventListener('load', async function() {
