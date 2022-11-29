@@ -21,7 +21,8 @@ async function RegistUser(nombre, apellido, correo, telefono, contraseña, confi
         'confirContraseña' : document.getElementById(confirContraseña).value, 
         'universidad' : document.getElementById(universidad).value, 
         'fechaNacmiento' : document.getElementById(fechaNacmiento).value, 
-        'genero' : document.getElementById(genero).value, 
+        'genero' : "", 
+        // 'genero' : document.getElementById(genero).value, 
     });
 }
 

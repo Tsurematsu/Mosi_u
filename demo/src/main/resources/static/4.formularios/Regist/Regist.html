@@ -87,11 +87,12 @@
       <script>
         boton = document.getElementById("Ingresar")
         boton.addEventListener("click", async ()=>{
-          let resultado = await RegistUser("nombre", "apellido", "correo", "telefono", "contraseña", "confirContraseña", "universidad", "fechaNacmiento", "genero");
+          let gen1 = document.getElementById();
+          let resultado = await RegistUser("nombre", "apellido", "correo", "telefono", "contraseña", "confirContraseña", "universidad", "fechaNacmiento", "");
           if (resultado=="true") {
-            
+            window.href = "../../index.html"
           }else if (resultado=="false") {
-            
+            alert("Registro invalido")
           }
         });
       </script>
