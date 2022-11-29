@@ -123,6 +123,7 @@ public class DataBase {
             return resultado;
         }
 
+        
         public static String Login(String NomUser, String password){
             String resultado = "false";
             for (String[] objectAdmins : Administradores) {
