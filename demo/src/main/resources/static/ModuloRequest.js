@@ -3,7 +3,7 @@
 async function LoginUser(correo, password) {
     return await callScript('../../Login', 
     { 
-        'user' : document.getElementById(correo).value, 
+        'correo' : document.getElementById(correo).value, 
         'pasword':document.getElementById(password).value 
     });
 }
