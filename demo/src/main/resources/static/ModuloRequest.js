@@ -36,9 +36,10 @@ async function RegistCard(usuario, password) {
 }
 
 async function GetDrivers(Ciudad1, Ciudad2, tipoPlan, tipoVuelo) {
+    // alert(Ciudad1 + " " + Ciudad2);
     return await callScript('../../GetDrivers', 
     { 
-        'Ciudad1' : Ciudad1, 
+        'Ciudad1' :Ciudad1, 
         'Ciudad2':Ciudad2,
         'tipoPlan':tipoPlan, 
         'tipoVuelo':tipoVuelo,

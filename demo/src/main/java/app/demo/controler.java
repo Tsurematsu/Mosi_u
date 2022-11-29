@@ -57,16 +57,12 @@ public class controler {
 
     @GetMapping(path = "/GetDrivers")
     public static String GetDrivers(Model Modelo, 
-    @RequestParam(name = "Ciudad1", required = false, defaultValue = "nothing") String Ciudad1, 
-    @RequestParam(name = "Ciudad2", required = false, defaultValue = "nothing") String Ciudad2,
-    @RequestParam(name = "tipoPlan", required = false, defaultValue = "nothing") String tipoPlan,
-    @RequestParam(name = "tipoVuelo", required = false, defaultValue = "nothing") String tipoVuelo
+    @RequestParam(name = "Ciudad1", required = false, defaultValue = "-1") String Ciudad1, 
+    @RequestParam(name = "Ciudad2", required = false, defaultValue = "-1") String Ciudad2,
+    @RequestParam(name = "tipoPlan", required = false, defaultValue = "-1") String tipoPlan,
+    @RequestParam(name = "tipoVuelo", required = false, defaultValue = "-1") String tipoVuelo
     ){
-        resultado=DataBase.TablaAdministrador.GetDrivers(
-            Integer.valueOf(Ciudad1), 
-            Integer.valueOf(Ciudad2), 
-            Integer.valueOf(tipoPlan), 
-            Integer.valueOf(tipoVuelo));
+        resultado=DataBase.TablaAdministrador.GetDrivers(Ciudad1, Ciudad2, tipoPlan, tipoVuelo);
         Modelo.addAttribute("results", resultado);
         return "nodo";
         

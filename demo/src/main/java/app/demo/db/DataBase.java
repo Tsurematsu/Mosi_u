@@ -376,11 +376,13 @@ public class DataBase {
         public static ArrayList<ObjectCity> City = new ArrayList<>();
         public static ArrayList<String> Universidades = new ArrayList<>();
         
-        public static String GetDrivers(Integer Ciudad1, Integer Ciudad2, Integer tipoPlan, Integer tipoVuelo){
+        public static String GetDrivers(String Ciudad1, String Ciudad2, String tipoPlan, String tipoVuelo){
+            // System.out.println("Ciudad1:" + Ciudad1 + " Ciudad2:" + Ciudad2 + " tipo de Plan:" + tipoPlan + " tipo de Vuelo:" + tipoVuelo);
             String retorno = "";
             for (int i = 0; i < 3; i++) {
-                retorno += "Elemento " + (i<3-1?",":"");
+                retorno += "Elemento " + i + (i<3-1?",":"");
             }
+            // System.out.println("Retorno=" + retorno);
             return retorno;
         } 
         public static String GetCiudad(){

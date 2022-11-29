@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <enlace href="https://fonts.googleapis.com/css2?familia =Mulish&mostrar = swap " rel=" stylesheet ">
         <link rel="stylesheet" href="../3.usuario/user.css">
-        <script src="./ModuloRequest.js"></script>
+        <!-- <script src="./ModuloRequest.js"></script> -->
         <title>Document</title>
     <!-- <script src="../jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -145,28 +145,30 @@
             let Resultado1 = "<option class='options' value='Ciudades'>Ciudades</option>";
             for (let i = 0; i < arrayList.length; i++) {
                 const element = arrayList[i];
-                Resultado +="\n<option  onclick='()=>{ selectCiudad2=" + i + "}' class='options' value='" + element + "'>" + element + "</option>"
+                Resultado1 +="\n<option  onclick='()=>{ selectCiudad2=" + i + "}' class='options' value='" + element + "'>" + element + "</option>"
             }
             document.getElementById("Ciudad2").innerHTML = Resultado1;
 
-            // LoadResults();
+            LoadResults();
         });
 
-        function LoadResults() {
-            let request = GetDrivers(selectCiudad1, selectCiudad2, TipoPlan, TipoTansporte);
-            console.log(request);
-            // setTimeout(() => {
-            //     let arrayList = request.split(',');
-
-            //     let Resultado1 = "";
-            //     for (let i = 0; i < arrayList.length; i++) {
-            //         const element = arrayList[i];
-            //         Resultado + "<li>" + element + "</li>";
-            //     }
-            //     document.getElementById("Resultados").innerHTML = Resultado1;
-            //     LoadResults(); 
-
-            // }, 2000);
+        async function  LoadResults() {
+            await setTimeout(async () => {
+                let request = await GetDrivers(selectCiudad1, selectCiudad2, TipoPlan, TipoTansporte);
+                // console.log(request);
+                let arrayList = request.split(',');
+                let Resultado1 = "";
+                console.log(arrayList.length);
+                for (let i = 0; i < arrayList.length; i++) {
+                    const element = arrayList[i];
+                    Resultado1 + "\n<li>" + element + "</li>";
+                }
+                if (Resultado1.length>=1) {
+                    document.getElementById("Resultados").innerHTML = Resultado1;
+                    console.log(Resultado1);
+                }
+                LoadResults(); 
+            }, 3000);
         }
     </script>
     <script src="user.js"></script>
