@@ -11,6 +11,7 @@ async function LoginUser(correo, password) {
 async function GetLoger() {return await callScript('../../GetLoger', {});}
 
 async function RegistUser(nombre, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero) {
+
     return await callScript('../../Regist', 
     { 
         'nombre' : document.getElementById(nombre).value, 
@@ -54,6 +55,7 @@ async function callScript(ruta, params) {
             ValorAbsoluto = ValorAbsoluto.split("</h1>")[0];
             // alert(ValorAbsoluto);
             resultado=ValorAbsoluto;
+            // alert(resultado)
         }
     });
     return await resultado;

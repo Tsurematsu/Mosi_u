@@ -35,7 +35,6 @@ public class controler {
         resultado=DataBase.TablaUsuarios.Registro(usuario, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero);
         Modelo.addAttribute("results", resultado);
         return "nodo";
-        
     }
 
 

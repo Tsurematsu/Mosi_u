@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="Regist.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="/Mosi_u/4.formularios/Regist/Regist.js"></script>
+    <script src="/4.formularios/Regist/Regist.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="../../ModuloRequest.js"></script>
@@ -19,7 +19,7 @@
     <div class="container">
         <div class="title">¡Registrate!</div>
         <div class="content">
-          <form action="#">
+          <form action="">
             <div class="user-details">
               <div class="input-box">
                 <span class="details">Nombre</span>
@@ -79,7 +79,7 @@
               <p>Aceptar <a href="/5.Terminos_Condiciones/Terminos_Condiciones.html" target="_blank" rel="noopener noreferrer">Terminos y Condiciones</a></p>
             </span>
             <div class="button">
-              <input type="submit" value="Registrarse">
+              <input id="Ingresar" type="submit" value="Registrarse">
             </div>
           </form>
         </div>
@@ -87,10 +87,9 @@
       <script>
         boton = document.getElementById("Ingresar")
         boton.addEventListener("click", async ()=>{
-          let gen1 = document.getElementById();
-          let resultado = await RegistUser("nombre", "apellido", "correo", "telefono", "contraseña", "confirContraseña", "universidad", "fechaNacmiento", "");
+          let resultado = await RegistUser("nombre", "apellido", "correo", "telefono", "contraseña", "confirContraseña", "universidad", "fechaNacimiento", "");
           if (resultado=="true") {
-            window.href = "../../index.html"
+            window.location.href = "../../4.formularios/Login/Login.html"
           }else if (resultado=="false") {
             alert("Registro invalido")
           }

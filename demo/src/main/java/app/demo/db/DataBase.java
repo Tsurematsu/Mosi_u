@@ -11,7 +11,7 @@ public class DataBase {
     public static class TablaTiquets {
         public static ArrayList<ObjectTiquets> ArrayTiquets = new ArrayList<>();
         public static class ObjectTiquets {
-            
+
         }
 
     }
@@ -108,7 +108,7 @@ public class DataBase {
         public static String Registro(String usuario, String apellido, String correo, String telefono, String contraseña, String confirContraseña, String universidad, String fechaNacmiento, String genero){
             String resultado = "false";
             boolean existe = false;
-            
+
             for (ObjectRegistos usuarios : ArrayUsuario) {
                 if (usuarios.getCorreoElectronico().equals(correo)) {
                     existe = true;
