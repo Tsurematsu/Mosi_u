@@ -12,56 +12,133 @@ public class DataBase {
         public static void ConfigBase(){
             ArrayList<String> HotelesList;
 
+            //MEDELLIN
             HotelesList = new ArrayList<>();
-            HotelesList.add(null);
-            City.add(new ObjectCity("Medellín", 100, 10, 10, HotelesList));
+            HotelesList.add("Hotel Poblado Plaza");
+            HotelesList.add("Hotel dorado la 70.");
+            HotelesList.add("The Morgana Polado Suites");
+            HotelesList.add("Hotel San Fernando Plaza");
+            HotelesList.add("Hotel Poblado Alejandria");
+            City.add(new ObjectCity("Medellín", 10, 10, 10, HotelesList));
+                
+
+            //BOGOTA
+            HotelesList = new ArrayList<>();
+            HotelesList.add("Hotel Regina");
+            HotelesList.add("Wyndham Bogotá Art");
+            HotelesList.add("Hotel Santa Barbara Real");
+            HotelesList.add("Black Bogotá");
+            HotelesList.add("Tryp Bogotá Embajada");
+            City.add(new ObjectCity("Bogotá", 100, 10, 10, HotelesList));
+            
+
+            //SANTA MARTA
+            HotelesList = new ArrayList<>();
+            HotelesList.add("Hotel La Riviera");
+            HotelesList.add("Irotama Resort");
+            HotelesList.add("Hotel Mercure Emile");
+            HotelesList.add("Sanha Plus Hotel");
+            HotelesList.add("Portobahia Hotel");
+            City.add(new ObjectCity("Santa Marta", 100, 10, 10, HotelesList));
+            
+
+            // Barranquilla
+            HotelesList = new ArrayList<>();
+            HotelesList.add("Hotel Estelar En Alto Prado");
+            HotelesList.add("Hotel American Golf");
+            HotelesList.add("Movich Buro 51.");
+            HotelesList.add("Country International Hotel");
+            HotelesList.add("Hotel Costa Linda.");
+            City.add(new ObjectCity("Barranquilla", 100, 10, 10, HotelesList));
+            
+
+            //VILLAVICENIO
+            HotelesList = new ArrayList<>();
+            HotelesList.add("Villavicencio Plaza");
+            HotelesList.add("Hotel Del Llano");
+            HotelesList.add("Confort Plaza Hotel");
+            HotelesList.add("Hotel Fontana Mar");
+            HotelesList.add("VVC HOTELS");
+            City.add(new ObjectCity("Villavicencio", 100, 10, 10, HotelesList));
             
             
+            // Bucaramanga
+            HotelesList = new ArrayList<>();
+            HotelesList.add("Hotel Cabecera Country");
+            HotelesList.add("Irotama Resort");
+            HotelesList.add("Hotel Mercure Emile");
+            HotelesList.add("Sanha Plus Hotel");
+            HotelesList.add("Portobahia Hotel");
+            City.add(new ObjectCity("Bucaramanga", 100, 10, 10, HotelesList));
+            
+            // Cartagena
+            HotelesList = new ArrayList<>();
+            HotelesList.add("Hotel Capilla Del Mar");
+            HotelesList.add("Hotel La Gran Vía");
+            HotelesList.add("Hotel Cartagena Plaza");
+            HotelesList.add("Hotel Almirante Cartagena");
+            HotelesList.add("Americas Torre del Mar");
+            City.add(new ObjectCity("Cartagena", 100, 10, 10, HotelesList));
+
+            
+            // #UNIVERSIDADES DE MEDELLIN
+            Universidades.add("Colegio Mayor de Antioquía (COLMAYOR)");
+            Universidades.add(".Universidad de Antioquia (UDEA)");
+            Universidades.add("Universidad Nacional de Colombia (UNAL)");
+            Universidades.add("Tecnológico de Antioquía (TDEA)");
+            Universidades.add("Universidad Pontificia Bolivariana (UPB)");
+            
+            // #UNIVERSIDADES DE BOGOTA
+            Universidades.add("Corporación Universitaria Minuto de Dios");
+            Universidades.add("Universidad Militar Nueva Granada (UMNG)");
+            Universidades.add("Universidad de los Andes");
+            Universidades.add("Pontificia Universidad Javeriana");
+            Universidades.add("Universidad Nacional de Colombia (UNAL)");
+            
+            // #UNIVERSIDADES DE SANTA MARTA
+            Universidades.add("Universidad del Magdalena (UNIMAG)");
+            Universidades.add("Universidad Sergio Arboleda");
+            Universidades.add("Universidad Antonio Nariño (UAN)");
+            Universidades.add("Universidad Cooperativa de Colombia (UCC)");
+            Universidades.add("Inst. Nac. de Formación Técnica Profesional de Ciénaga");
+            
+            // #UNIVERSIDADES DE BARRANQUILLA
+            Universidades.add("Universidad del Atlántico");
+            Universidades.add("Universidad del Norte (UNINORTE)");
+            Universidades.add("Universidad Autónoma del Caribe (UAC)");
+            Universidades.add("Corporación Universitaria de la Costa (CUC)");
+            Universidades.add("Corporación Universitaria Latinoamericana (CUL)");
+            
+
+            // #UNIVERSIDADES DE VILLAVICENCIO
+            Universidades.add("Universidad Santo Tomás (USTA)");
+            Universidades.add("Universidad Autónoma de Nariño");
+            Universidades.add("Corporación Universitaria Minuto de Dios");
+            Universidades.add("Corporación Universitaria del Meta (UNIMETA)");
+            Universidades.add("Universidad Autónoma de Nariño");
+
+            // #UNIVERSIDADES DE BUCARAMANGA
+            Universidades.add("Universidad Autónoma de Bucaramanga (UNAB)");
+            Universidades.add("Universidad Pontificia Bolivariana (UPB)");
+            Universidades.add("Universidad Industrial de Santander (UIS)");
+            Universidades.add("Universidad Francisco de Paula Santander (UFPS)");
+            Universidades.add("Universidad de Santander (UDES)");
+
+
+            // #UNIVERSIDADES DE CARTAGENA
+            Universidades.add("Universidad de San Buenaventura");
+            Universidades.add("Fundación Universitaria Tecnológico Comfenalco");
+            Universidades.add("Corporación Universitaria Rafael Núñez (CURN)");
+            Universidades.add("Universidad del Sinú (UNISINU)");
+            Universidades.add("Universidad de Cartagena");
+            
+            ArrayAdministrador.add(new ObjectAdministrador(City.get(0), City.get(1), 100, "Tierra"));
+
         }
     }
 
-
-//     Datos_personales=[]
-// ciudades=['1.Medellín','2.Bogotá','3.Santa Marta','4.Barranquilla','5.Villavicencio','6.Bucaramanga','7.Cartagena']
-// universidades=[[
-// #UNIVERSIDADES DE MEDELLIN
-// '1.Colegio Mayor de Antioquía (COLMAYOR)','2.Universidad de Antioquia (UDEA)', '3.Universidad Nacional de Colombia (UNAL)', '4.Tecnológico de Antioquía (TDEA)','5.Universidad Pontificia Bolivariana (UPB)'],
-// #UNIVERSIDADES DE BOGOTA
-// ['1.Universidad Nacional de Colombia (UNAL)','2.Pontificia Universidad Javeriana','3.Universidad de los Andes','4.Universidad Militar Nueva Granada (UMNG)','5.Corporación Universitaria Minuto de Dios'],
-// #UNIVERSIDADES DE SANTA MARTA
-// ['1.Universidad del Magdalena (UNIMAG)', '2.Universidad Sergio Arboleda','3.Universidad Antonio Nariño (UAN)','4.Universidad Cooperativa de Colombia (UCC)','5.Inst. Nac. de Formación Técnica Profesional de Ciénaga'],
-// #UNIVERSIDADES DE BARRANQUILLA
-// ['1.Universidad del Atlántico','2.Universidad del Norte (UNINORTE)','3.Universidad Autónoma del Caribe (UAC)', '4.Corporación Universitaria de la Costa (CUC)','5.Corporación Universitaria Latinoamericana (CUL)'],
-// #UNIVERSIDADES DE VILLAVICENCIO
-// ['1.Universidad de los Llanos','2.Corporación Universitaria del Meta (UNIMETA)','3.Corporación Universitaria Minuto de Dios','4.Universidad Autónoma de Nariño','5.Universidad Santo Tomás (USTA)'],
-// #UNIVERSIDADES DE BUCARAMANGA
-// ['1.Universidad Industrial de Santander (UIS)', '2.Universidad Francisco de Paula Santander (UFPS)','3.Universidad de Santander (UDES)','4.Universidad Autónoma de Bucaramanga (UNAB)','5.Universidad Pontificia Bolivariana (UPB)'],
-// #UNIVERSIDADES DE CARTAGENA
-// ['1.Universidad de Cartagena','2.Universidad del Sinú (UNISINU)','3.Corporación Universitaria Rafael Núñez (CURN)','4.Fundación Universitaria Tecnológico Comfenalco','5.Universidad de San Buenaventura']]
-
-
-// hoteles=[[
-// #HOTELES DE MEDELLIN
-// '1.Hotel Poblado Plaza','2.Hotel dorado la 70.''3.The Morgana Polado Suites.','4.Hotel San Fernando Plaza','5.Hotel Poblado Alejandria.'],
-// #HOTELES DE BOGOTA
-// ['1.Hotel regina.','2.Wyndham Bogotá Art.','3.Hotel Santa Barbara Real.','4.Black Bogotá.','5.Tryp Bogotá Embajada.'],
-// #HOTELES DE SANTAMARTA
-// ['1.Hotel La Riviera.','2.Irotama Resort.','3.Hotel Mercure Emile.','4.Sanha Plus Hotel.','5.Portobahia Hotel.'],
-// #HOTELES DE BARRANQUILLA
-// ['1.Hotel Estelar En Alto Prado.','2.Hotel American Golf.','3.Movich Buro 51.','4.Country International Hotel.','5.Hotel Costa Linda.'],
-// #HOTELES DE VILLAVICENCIO
-// ['1.Hotel Villavicencio Plaza.','2.Hotel Del Llano.','3.Hotel Fontana Mar.','4.Confort Plaza Hotel.','5.VVC HOTELS.'],
-// #HOTELES DE BUCARAMANGA
-// ['1.Hotel Cabecera Country.','2.Hotel Chicamocha.','3.San Jose Plaza.','4.Hotel Buena Vista.','5.Hotel Plazuela Real.'],
-// #HOTELES DE CARTAGENA
-// ['1.Hotel Capilla Del Mar.','2.Hotel La Gran Vía.','3.Hotel Cartagena Plaza.','4.Hotel Almirante Cartagena.','5.Americas Torre del Mar.']]
-
-
     static String[][] Administradores= new String[][]{{"Jorge", "joji"}, {"Martin", "martin123"}, {"Aldair", "#Aldair"}, {"Roys", "roys123"}, {"Jose", "admin"}};
 
-    /**
-     * Tabla
-     */ 
     public static class TablaTiquets {
         public static class ObjectTiquets {
             public String DepartamentoOut ="";
@@ -279,35 +356,46 @@ public class DataBase {
     public static class TablaAdministrador{
         public static ArrayList<ObjectAdministrador> ArrayAdministrador = new ArrayList<>();
         public static ArrayList<ObjectCity> City = new ArrayList<>();
+        public static ArrayList<String> Universidades = new ArrayList<>();
         
 
         public static class ObjectAdministrador {
-            city Ciudad1;
-            city Ciudad2;
-            Integer PrecioTotal;
-            public ObjectAdministrador(city ciudad1, city ciudad2, Integer precioTotal) {
+            ObjectCity Ciudad1;
+            ObjectCity Ciudad2;
+            Integer PrecioAgregado;
+            String  TipoTransporte;
+            public ObjectAdministrador(ObjectCity ciudad1, ObjectCity ciudad2, Integer precioAgregado,
+                    String tipoTransporte) {
                 Ciudad1 = ciudad1;
                 Ciudad2 = ciudad2;
-                PrecioTotal = precioTotal;
+                PrecioAgregado = precioAgregado;
+                TipoTransporte = tipoTransporte;
             }
-            public city getCiudad1() {
+            public ObjectCity getCiudad1() {
                 return Ciudad1;
             }
-            public void setCiudad1(city ciudad1) {
+            public void setCiudad1(ObjectCity ciudad1) {
                 Ciudad1 = ciudad1;
             }
-            public city getCiudad2() {
+            public ObjectCity getCiudad2() {
                 return Ciudad2;
             }
-            public void setCiudad2(city ciudad2) {
+            public void setCiudad2(ObjectCity ciudad2) {
                 Ciudad2 = ciudad2;
             }
-            public Integer getPrecioTotal() {
-                return PrecioTotal;
+            public Integer getPrecioAgregado() {
+                return PrecioAgregado;
             }
-            public void setPrecioTotal(Integer precioTotal) {
-                PrecioTotal = precioTotal;
+            public void setPrecioAgregado(Integer precioAgregado) {
+                PrecioAgregado = precioAgregado;
             }
+            public String getTipoTransporte() {
+                return TipoTransporte;
+            }
+            public void setTipoTransporte(String tipoTransporte) {
+                TipoTransporte = tipoTransporte;
+            }
+            
         }
 
         public static class ObjectCity {
