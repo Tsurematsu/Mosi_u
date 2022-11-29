@@ -153,8 +153,9 @@
         });
 
         function LoadResults() {
+            let request = GetDrivers(selectCiudad1, selectCiudad2, TipoPlan, TipoTansporte);
+            console.log(request);
             // setTimeout(() => {
-            //     let request = GetDrivers(selectCiudad1, selectCiudad2, TipoPlan, TipoTansporte);
             //     let arrayList = request.split(',');
 
             //     let Resultado1 = "";
