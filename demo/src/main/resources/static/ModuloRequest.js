@@ -1,21 +1,19 @@
 
 
-async function LoginUser(usuario, password) {
+async function LoginUser(correo, password) {
     return await callScript('../../Login', 
     { 
-        'user' : document.getElementById(usuario).value, 
+        'user' : document.getElementById(correo).value, 
         'pasword':document.getElementById(password).value 
     });
 }
 
-async function GetLoger() {
-    return await callScript('../../GetLoger', {});
-}
+async function GetLoger() {return await callScript('../../GetLoger', {});}
 
 async function RegistUser(nombre, apellido, correo, telefono, contraseña, confirContraseña, universidad, fechaNacmiento, genero) {
     return await callScript('../../Regist', 
     { 
-        'nombre' : document.getElementById(usuario).value, 
+        'nombre' : document.getElementById(nombre).value, 
         'apellido' : document.getElementById(apellido).value, 
         'correo' : document.getElementById(correo).value, 
         'telefono' : document.getElementById(telefono).value, 

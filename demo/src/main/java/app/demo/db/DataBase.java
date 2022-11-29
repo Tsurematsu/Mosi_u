@@ -22,7 +22,9 @@ public class DataBase {
         
         public static ArrayList<ObjectRegistos> ArrayUsuario = new ArrayList<>();
         static String adminNombre = "No Logeado";
+        static String userNombre = "No Logeado";
         public static String GetAdmin(){return adminNombre;}
+        public static String GetUser(){return userNombre;}
 
         public static class ObjectRegistos {
             String cedula;
@@ -105,7 +107,19 @@ public class DataBase {
         
         public static String Registro(String usuario, String apellido, String correo, String telefono, String contraseña, String confirContraseña, String universidad, String fechaNacmiento, String genero){
             String resultado = "false";
+            boolean existe = false;
             
+            for (ObjectRegistos usuarios : ArrayUsuario) {
+                if (usuarios.getCorreoElectronico().equals(correo)) {
+                    existe = true;
+                }
+            }
+            if (!existe) {
+                if (contraseña.equals(confirContraseña)) {
+                    ArrayUsuario.add(new ObjectRegistos("", usuario, apellido, fechaNacmiento,telefono, correo, contraseña, universidad, genero));
+                    resultado= "true";
+                }
+            }
             return resultado;
         }
 
@@ -115,6 +129,12 @@ public class DataBase {
                 if (objectAdmins[0].equals(NomUser) && objectAdmins[1].equals(password)) {
                     resultado="admin";
                     adminNombre=NomUser;
+                }
+            }
+            for (ObjectRegistos usuario : ArrayUsuario) {
+                if (usuario.correoElectronico.equals(NomUser) && usuario.contrasenia.equals(password)) {
+                    userNombre = NomUser;
+                    resultado="user";
                 }
             }
             return resultado;
