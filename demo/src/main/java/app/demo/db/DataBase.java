@@ -11,7 +11,7 @@ public class DataBase {
     public static class TablaTiquets {
         public static ArrayList<ObjectTiquets> ArrayTiquets = new ArrayList<>();
         public static class ObjectTiquets {
-
+            
         }
 
     }
