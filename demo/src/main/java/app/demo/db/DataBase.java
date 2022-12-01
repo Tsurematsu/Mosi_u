@@ -228,8 +228,6 @@ public class DataBase {
         }
     }
 
-
-
     public static class TablaUsuarios extends TablaTiquets{
         public static ArrayList<ObjectUsers> ArrayUsuario = new ArrayList<>();
         static String adminNombre = "No Logeado";
@@ -478,8 +476,6 @@ public class DataBase {
 
     }
     
-
-
     
 
 }
