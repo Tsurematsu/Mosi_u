@@ -191,8 +191,7 @@ nav>a:hover{
     cursor: pointer;
     color: white;
     background-size: 300%;
-    /* margin-bottom: 100px;*/
-    margin-right: 30px; 
+     
     background-image: linear-gradient(to left, #c471ed, #12c2e9,  #c471ed);
     transition: 1s;
     display:inline-block;
